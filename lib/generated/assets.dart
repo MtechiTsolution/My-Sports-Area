@@ -22,8 +22,6 @@ class Assets {
   static const String appBarAppbarTitle = 'lib/widgets/app_bar/appbar_title.dart';
   static const String appBarCustomAppBar = 'lib/widgets/app_bar/custom_app_bar.dart';
   static const String createAccountCategoryCreateAccount = 'lib/Screens/CreateAccount/category_create_account.dart';
-  static const String createAccountInformationPeroformance = 'lib/Screens/CreateAccount/Information_peroformance.dart';
-  static const String createAccountInputdetail = 'lib/Screens/CreateAccount/inputdetail.dart';
   static const String createAccountLastClubPlayed = 'lib/Screens/CreateAccount/last_club_played.dart';
   static const String createAccountMyInterests = 'lib/Screens/CreateAccount/My_interests.dart';
   static const String createAccountSequertyQuestion = 'lib/Screens/CreateAccount/Sequerty_question.dart';
@@ -274,12 +272,14 @@ class Assets {
   static const String imagesLogo = 'assets/images/logo.png';
   static const String imagesNewpassword = 'assets/images/newpassword.png';
   static const String imagesQuestionMark = 'assets/images/question_mark.png';
+  static const String imagesUploadImage = 'assets/images/upload_image.png';
   static const String imagesVector = 'assets/images/Vector.png';
   static const String libMain = 'lib/main.dart';
   static const String libWidgetsCustomSearchView = 'lib/widgets/custom_search_view.dart';
   static const String localizationAppLocalization = 'lib/localization/app_localization.dart';
   static const String messagingMesageView = 'lib/Screens/Messaging/mesage_view.dart';
   static const String messagingMessaging = 'lib/Screens/Messaging/messaging.dart';
+  static const String newImagesUploadImage = 'assets/images/new_images/upload_image.png';
   static const String newsAndScoreLiveScoreView = 'lib/Screens/News_and_Score/live_score_view.dart';
   static const String newsAndScoreNewsPage = 'lib/Screens/News_and_Score/news_page.dart';
   static const String newsAndScoreNewsScorre = 'lib/Screens/News_and_Score/news_scorre.dart';
@@ -287,6 +287,9 @@ class Assets {
   static const String notificationsNotification = 'lib/Screens/Notifications/notification.dart';
   static const String notificationsNotificationSetting = 'lib/Screens/Notifications/notification_setting.dart';
   static const String offersAndApplicationsOffersAndApplication = 'lib/Screens/Offers_and_applications/offers_and_application.dart';
+  static const String playerDataInformationPeroformance = 'lib/Screens/CreateAccount/player_data/Information_peroformance.dart';
+  static const String playerDataInputdetail = 'lib/Screens/CreateAccount/player_data/inputdetail.dart';
+  static const String playerDataSetProfile = 'lib/Screens/CreateAccount/player_data/set_profile.dart';
   static const String postUploadUploadPostOne = 'lib/Screens/Post_Upload/upload_post_one.dart';
   static const String postUploadUploadVideo = 'lib/Screens/Post_Upload/upload_video.dart';
   static const String relationshipClubProfile = 'lib/Screens/Relationship/club_profile.dart';

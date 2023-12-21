@@ -1,19 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
+import 'package:my_sports_app/Screens/CreateAccount/player_data/set_profile.dart';
 import 'package:my_sports_app/localization/en_us/en_us_translations.dart';
 import 'package:my_sports_app/widgets/custom_elevated_button.dart';
 
-import '../../Utils/image_constant.dart';
-import '../../Utils/size_utils.dart';
-import '../../Utils/validation_functions.dart';
-import '../../theme/app_decoration.dart';
-import '../../theme/custom_button_style.dart';
-import '../../theme/custom_text_style.dart';
-import '../../theme/theme_helper.dart';
-import '../../widgets/custom_image_view.dart';
-import '../../widgets/custom_text_form_field.dart';
-import '../Login.dart';
-import 'last_club_played.dart';
+import '../../../Utils/image_constant.dart';
+import '../../../Utils/size_utils.dart';
+import '../../../Utils/validation_functions.dart';
+import '../../../theme/app_decoration.dart';
+import '../../../theme/custom_button_style.dart';
+import '../../../theme/custom_text_style.dart';
+import '../../../theme/theme_helper.dart';
+import '../../../widgets/custom_image_view.dart';
+import '../../../widgets/custom_text_form_field.dart';
+import '../../Login.dart';
+import '../last_club_played.dart';
 
 class Input_Account_Detail extends StatefulWidget {
   const Input_Account_Detail({super.key});
@@ -25,7 +26,8 @@ class Input_Account_Detail extends StatefulWidget {
 class _Input_Account_DetailState extends State<Input_Account_Detail> {
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return
+      Scaffold(
         resizeToAvoidBottomInset: false,
         backgroundColor: theme.colorScheme.primaryContainer,
         body: Form(
@@ -66,6 +68,7 @@ class _Input_Account_DetailState extends State<Input_Account_Detail> {
                                   children: [
                                     Expanded(
                                         child: CustomTextFormField(
+                                          autofocus: false,
                                             // controller:
                                             // controller.nameController,
                                           contentPadding: EdgeInsets.all(15),
@@ -82,6 +85,7 @@ class _Input_Account_DetailState extends State<Input_Account_Detail> {
                                             })),
                                     Expanded(
                                         child: CustomTextFormField(
+                                            autofocus: false,
                                             // controller: controller
                                             //     .lastNameController,
                                             margin: getMargin(left: 5),
@@ -103,6 +107,7 @@ class _Input_Account_DetailState extends State<Input_Account_Detail> {
                               child: Text(enUs["lbl_email"]!,
                                   style: theme.textTheme.titleSmall)),
                           CustomTextFormField(
+                            autofocus: false,
                          //     controller: controller.emailController,
                               margin: getMargin(top: 5),
                               hintText: enUs["lbl_email"]!,
@@ -131,38 +136,13 @@ class _Input_Account_DetailState extends State<Input_Account_Detail> {
                               },
 
                           ),
-                          Padding(
-                              padding: getPadding(left: 7, top: 16),
-                              child: Text(enUs["lbl_date_of_birth"]!,
-                                  style: theme.textTheme.titleSmall)),
-                          CustomTextFormField(
-                              //controller: controller.dateOfBirthController,
-                              margin: getMargin(top: 8),
 
-                              hintText: enUs["msg_birthday_optional"]!,
-                              hintStyle:
-                              CustomTextStyles.bodyMediumPoppinsLight,
-                              suffix: Container(
-                                  margin: getMargin(
-                                      left: 30,
-                                      top: 9,
-                                      right: 15,
-                                      bottom: 9),
-                                  child: CustomImageView(
-                                      imagePath:
-                                      ImageConstant.imgCalendar11,
-                                      height: getSize(17),
-                                      width: getSize(17))),
-                              suffixConstraints: BoxConstraints(
-                                  maxHeight: getVerticalSize(35)),
-                            contentPadding: EdgeInsets.all(15),
-
-                          ),
                           Padding(
                               padding: getPadding(left: 7, top: 20),
                               child: Text(enUs["lbl_password"]!,
                                   style: theme.textTheme.titleSmall)),
                           CustomTextFormField(
+                              autofocus: false,
                             // controller: controller
                             //     .lastNameController,
                               margin: getMargin(left: 5),
@@ -181,6 +161,7 @@ class _Input_Account_DetailState extends State<Input_Account_Detail> {
                               child: Text(enUs["msg_confirm_password"]!,
                                   style: theme.textTheme.titleSmall)),
                           CustomTextFormField(
+                              autofocus: false,
                             // controller: controller
                             //     .lastNameController,
                               margin: getMargin(left: 5),
@@ -225,7 +206,7 @@ class _Input_Account_DetailState extends State<Input_Account_Detail> {
   }
 
   void onTapCreateaccount() {
-    Navigator.push(context, MaterialPageRoute(builder: (context)=>LastClubPlayed()));
+    Navigator.push(context, MaterialPageRoute(builder: (context)=>Player_set_profile()));
 
   }
 

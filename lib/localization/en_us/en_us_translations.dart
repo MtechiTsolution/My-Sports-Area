@@ -67,7 +67,9 @@ final Map<String, String> enUs = {
   "lbl_red_cards": "Red cards",
 
   // Acount Create Four - Tab Container Screen
-  "lbl_work": "Work", "lbl_performance": "Performance",
+  "lbl_work": "Work", "lbl_performance": "Experience",
+
+  "lbl_work": "Work", "lbl_skill": "Skill",
 
   // Acount Create Five Screen
   "msg_sports_selection": "Sports selection",

@@ -280,7 +280,7 @@ import '../../theme/theme_helper.dart';
 import '../../widgets/custom_elevated_button.dart';
 import '../../widgets/custom_image_view.dart';
 import '../../widgets/custom_text_form_field.dart';
-import 'Information_peroformance.dart';
+import 'player_data/Information_peroformance.dart';
 
 class LastClubPlayed extends StatefulWidget {
   const LastClubPlayed({Key? key});

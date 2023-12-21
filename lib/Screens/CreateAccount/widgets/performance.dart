@@ -1,15 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../../../Utils/image_constant.dart';
 import '../../../Utils/size_utils.dart';
-import '../../../Utils/validation_functions.dart';
-import '../../../localization/en_us/en_us_translations.dart';
-import '../../../theme/custom_button_style.dart';
-import '../../../theme/custom_text_style.dart';
+
 import '../../../theme/theme_helper.dart';
-import '../../../widgets/custom_elevated_button.dart';
-import '../../../widgets/custom_image_view.dart';
-import '../../../widgets/custom_text_form_field.dart';
 
 class TabPerformance extends StatefulWidget {
   const TabPerformance({super.key});
@@ -19,6 +12,16 @@ class TabPerformance extends StatefulWidget {
 }
 
 class _TabPerformanceState extends State<TabPerformance> {
+  String? selectedGame; // Declare the selectedGame variable
+  String? selectRank;
+  String? selectskilllevel;
+
+  List<String> games = ['Forward', 'Gol keeper', 'Striker'];
+  List<String> rank = ['Senior', 'Junior', 'Beginner'];
+  List<String> level = ['Level 1', 'Level 2', 'Level 3'];
+
+
+
   @override
   Widget build(BuildContext context) {
     return
@@ -39,168 +42,396 @@ class _TabPerformanceState extends State<TabPerformance> {
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
                                       Padding(
-                                          padding: getPadding(left: 7, right: 22),
-                                          child: Row(
-                                              mainAxisAlignment:
-                                              MainAxisAlignment.spaceBetween,
-                                              children: [
-                                                Padding(
-                                                    padding: getPadding(bottom: 1),
-                                                    child: Text(enUs["lbl_position"]!,
-                                                        style: CustomTextStyles
-                                                            .labelLargePoppins)),
-                                                Text(enUs["lbl_number_of_goals"]!,
-                                                    style: CustomTextStyles
-                                                        .labelLargePoppins)
-                                              ])),
-                                      Padding(
-                                          padding:
-                                          getPadding(left: 7, top: 6, right: 7),
-                                          child: Row(
-                                              mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                              children: [
-                                                Expanded(
-                                                    child: CustomTextFormField(
-                                                        // controller: controller
-                                                        //     .positionvalueController,
-                                                        autofocus: false,
-                                                        margin: getMargin(right: 19),
-                                                        
-                                                        hintText: enUs["lbl_forword"]!,
-                                                        hintStyle: CustomTextStyles
-                                                            .bodyMediumPoppinsLight,
-                                                        suffix: Container(
-                                                            margin: getMargin(
-                                                                left: 25,
-                                                                top: 14,
-                                                                right: 20,
-                                                                bottom: 13),
-                                                            child: CustomImageView(
-                                                                svgPath: ImageConstant
-                                                                    .imgFrame)),
-                                                        suffixConstraints:
-                                                        BoxConstraints(
-                                                            maxHeight:
-                                                            getVerticalSize(
-                                                                35)),
-                                                        contentPadding: EdgeInsets.all(15)
-                                                    )),
-                                                Expanded(
-                                                    child: CustomTextFormField(
-                                                        // controller: controller
-                                                        //     .goalsoneController,
-                                                        autofocus: false,
-                                                        margin: getMargin(left: 19),
-                                                        hintText:enUs[ "lbl_0"]!,
-                                                        hintStyle: CustomTextStyles
-                                                            .bodyMediumPoppinsLight,
-                                                        suffix: Container(
-                                                            margin: getMargin(
-                                                                left: 30,
-                                                                top: 18,
-                                                                right: 10,
-                                                                bottom: 9),
-                                                            child: CustomImageView(
-                                                                svgPath: ImageConstant
-                                                                    .imgFrame)),
-                                                        suffixConstraints:
-                                                        BoxConstraints(
-                                                            maxHeight:
-                                                            getVerticalSize(
-                                                                35)),
-                                                        contentPadding: EdgeInsets.all(15)
+                                          padding: getPadding(left: 7, top: 10,bottom: 5),
+                                          child: Text("Game",
 
-                                                    ))
-                                              ])),
-                                      Padding(
-                                          padding: getPadding(left: 7, top: 16),
-                                          child: Text(enUs["lbl_yellow_cards"]!,
-                                              style: CustomTextStyles
-                                                  .labelLargePoppins)),
-                                      CustomTextFormField(
-                                          //controller:
-                                        //  controller.yellowcardsvaluController,
-                                          margin:
-                                          getMargin(left: 2, top: 5, right: 7),
-                                          hintText: enUs["msg_select_no_of_cards"]!,
-                                          autofocus: false,
-                                          hintStyle:
-                                          CustomTextStyles.bodyMediumPoppinsLight,
-                                          suffix: Container(
-                                              margin: getMargin(
-                                                  left: 30,
-                                                  top: 14,
-                                                  right: 11,
-                                                  bottom: 13),
-                                              child: CustomImageView(
-                                                  svgPath: ImageConstant.imgFrame)),
-                                          suffixConstraints: BoxConstraints(
-                                              maxHeight: getVerticalSize(35)),
-                                          contentPadding: EdgeInsets.all(15)
+                                            style: theme.textTheme.titleMedium,)
                                       ),
-                                      Padding(
-                                          padding: getPadding(left: 7, top: 11),
-                                          child: Text(enUs["lbl_red_cards"]!,
-                                              style: CustomTextStyles
-                                                  .labelLargePoppins)),
-                                      CustomTextFormField(
-                                          // controller:
-                                          //controller.yellowcardsvaluController1,
-                                          margin:getMargin(left: 2, top: 5, right: 7),
-                                          hintText: enUs[ "msg_select_no_of_cards"]!,
-                                          hintStyle:
-                                          CustomTextStyles.bodyMediumPoppinsLight,
-                                          autofocus: false,
-                                          suffix: Container(
-                                              margin: getMargin(
-                                                  left: 30,
-                                                  top: 14,
-                                                  right: 11,
-                                                  bottom: 13),
-                                              child: CustomImageView(
-                                                  svgPath: ImageConstant.imgFrame)),
-                                          suffixConstraints: BoxConstraints(
-                                              maxHeight: getVerticalSize(35)),
-                                          contentPadding: EdgeInsets.all(15)
-                                      ),
-                                      Padding(
-                                          padding: getPadding(left: 7, top: 12),
-                                          child: Text(enUs["lbl_trainer"]!,
-                                              style: CustomTextStyles
-                                                  .labelLargePoppins)),
-                                      CustomTextFormField(
-                                          //controller: controller.nameController,
-                                          margin: getMargin(top: 5, right: 7),
-                                          autofocus: false,
-                                          hintText:enUs[ "msg_enter_the_name_last"]!,
-                                          hintStyle:
-                                          CustomTextStyles.bodyMediumPoppinsLight,
-
+                                      TextFormField(
+                                        autofocus: false,
+                                        // controller: controller
+                                        //     .lastNameController,
+                                        decoration: InputDecoration(
                                           contentPadding: EdgeInsets.all(15),
-                                          textInputAction: TextInputAction.done,
-                                          validator: (value) {
-                                            if (!isText(value)) {
-                                              return "Please enter valid text";
-                                            }
-                                            return null;
-                                          }),
-                                      CustomElevatedButton(
-                                          width: getHorizontalSize(136),
-                                          height: getVerticalSize(40),
-                                          text: enUs["lbl_next"]!,
-                                          margin: getMargin(top: 40),
-                                          buttonStyle:
-                                          CustomButtonStyles.fillPrimaryTL18,
-                                          buttonTextStyle: CustomTextStyles
-                                              .titleSmallPrimaryContainer,
-                                          onTap: () {
-                                            onTapNext();
-                                          },
-                                          alignment: Alignment.centerRight)
-                                    ]))
+                                          hintText: "Enter the name of game",
+                                          hintStyle: TextStyle(fontSize: 16, color: Colors.grey),
+                                          border: OutlineInputBorder(
+                                            borderRadius: BorderRadius.all(Radius.circular(8)),
+                                          ),
+                                        ),
+                                        keyboardType: TextInputType.text,
+                                        onChanged: (value) {
+                                          // You can perform actions when the text changes
+                                        },
+                                        validator: (value) {
+                                          if (value == null || value.isEmpty) {
+                                            return "Please enter valid text";
+                                          }
+
+                                          // You can add additional validation if needed
+
+                                          return null;
+                                        },
+                                      ),
+                                    ])),
+//Position in game
+                            Padding(
+                              padding: getPadding(left: 15, top: 5, right: 18),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Padding(
+                                    padding: getPadding(left: 7, top: 10, bottom: 5),
+                                    child: Text(
+                                      "Position in game",
+                                      style: theme.textTheme.titleMedium,
+                                    ),
+                                  ),
+                                  DropdownButtonFormField<String>(
+                                    value: selectedGame,
+                                    onChanged: (value) {
+                                      setState(() {
+                                        selectedGame = value;
+                                      });
+                                    },
+                                    items: games.map<DropdownMenuItem<String>>((String game) {
+                                      return DropdownMenuItem<String>(
+                                        value: game,
+                                        child: Text(game),
+                                      );
+                                    }).toList(),
+                                    decoration: InputDecoration(
+                                      contentPadding: EdgeInsets.all(15),
+                                      hintText: "Select the name of the game",
+                                      hintStyle: TextStyle(fontSize: 16, color: Colors.grey),
+                                      border: OutlineInputBorder(
+                                        borderRadius: BorderRadius.all(Radius.circular(8)),
+                                      ),
+                                    ),
+                                    validator: (value) {
+                                      if (value == null || value.isEmpty) {
+                                        return "Please select a game";
+                                      }
+
+                                      // You can add additional validation if needed
+
+                                      return null;
+                                    },
+                                  ),
+                                ],
+                              ),
+                            ),
+//Rank in game
+                            Padding(
+                              padding: getPadding(left: 15, top: 5, right: 18),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Padding(
+                                    padding: getPadding(left: 7, top: 10, bottom: 5),
+                                    child: Text(
+                                      "Rank in game",
+                                      style: theme.textTheme.titleMedium,
+                                    ),
+                                  ),
+                                  DropdownButtonFormField<String>(
+                                    value: selectRank,
+                                    onChanged: (value) {
+                                      setState(() {
+                                        selectRank = value;
+                                      });
+                                    },
+                                    items: rank.map<DropdownMenuItem<String>>((String game) {
+                                      return DropdownMenuItem<String>(
+                                        value: game,
+                                        child: Text(game),
+                                      );
+                                    }).toList(),
+                                    decoration: InputDecoration(
+                                      contentPadding: EdgeInsets.all(15),
+                                      hintText: "Select rank",
+                                      hintStyle: TextStyle(fontSize: 16, color: Colors.grey),
+                                      border: OutlineInputBorder(
+                                        borderRadius: BorderRadius.all(Radius.circular(8)),
+                                      ),
+                                    ),
+                                    validator: (value) {
+                                      if (value == null || value.isEmpty) {
+                                        return "Please select a game";
+                                      }
+
+                                      // You can add additional validation if needed
+
+                                      return null;
+                                    },
+                                  ),
+                                ],
+                              ),
+                            ),
+// number of goal
+                            Padding(
+                              padding: getPadding(left: 15, top: 5, right: 18),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Padding(
+                                    padding: getPadding(left: 7, top: 10, bottom: 5),
+                                    child: Text(
+                                      "Number of goals",
+                                      style: theme.textTheme.titleMedium,
+                                    ),
+                                  ),
+                                  TextFormField(
+                                    autofocus: false,
+                                    // controller: controller
+                                    //     .lastNameController,
+                                    decoration: InputDecoration(
+                                      contentPadding: EdgeInsets.all(15),
+                                      hintText: "Enter Number of Goals",
+                                      hintStyle: TextStyle(fontSize: 16, color: Colors.grey),
+                                      border: OutlineInputBorder(
+                                        borderRadius: BorderRadius.all(Radius.circular(8)),
+                                      ),
+                                    ),
+                                    keyboardType: TextInputType.number,
+                                    onChanged: (value) {
+                                      // You can perform actions when the text changes
+                                    },
+                                    validator: (value) {
+                                      if (value == null || value.isEmpty) {
+                                        return "Please enter valid goal";
+                                      }
+
+                                      // You can add additional validation if needed
+
+                                      return null;
+                                    },
+                                  ),
+                                ],
+                              ),
+                            ),
+//cards yellow others
+
+                            Padding(
+                              padding: getPadding(left: 15, top: 5, right: 18),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Row(
+                                    children: [
+                                      Expanded(
+                                        child: Padding(
+                                          padding: getPadding(left: 7, top: 10, bottom: 5),
+                                          child: Text(
+                                            "Yellow cards",
+                                            style: theme.textTheme.titleMedium,
+                                          ),
+                                        ),
+                                      ),
+                                      Expanded(
+                                        child: Padding(
+                                          padding: getPadding(left: 7, top: 10, bottom: 5),
+                                          child: Text(
+                                            "Red cards",
+                                            style: theme.textTheme.titleMedium,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  Row(
+                                    children: [
+                                      Expanded(
+                                        child: Padding(
+                                          padding: EdgeInsets.only(right: 5),
+                                          child:
+                                          TextFormField(
+                                            autofocus: false,
+                                            // controller: controller
+                                            //     .lastNameController,
+                                            decoration: InputDecoration(
+                                              contentPadding: EdgeInsets.all(15),
+                                              hintText: "No.of Yellow cards",
+                                              hintStyle: TextStyle(fontSize: 16, color: Colors.grey),
+                                              border: OutlineInputBorder(
+                                                borderRadius: BorderRadius.all(Radius.circular(8)),
+                                              ),
+                                            ),
+                                            keyboardType: TextInputType.number,
+                                            onChanged: (value) {
+                                              // You can perform actions when the text changes
+                                            },
+                                            validator: (value) {
+                                              if (value == null || value.isEmpty) {
+                                                return "Please enter valid text";
+                                              }
+
+                                              // You can add additional validation if needed
+
+                                              return null;
+                                            },
+                                          ),
+                                        ),
+                                      ),
+                                      Expanded(
+                                        child: Padding(
+                                          padding: EdgeInsets.only(right: 5),
+                                          child:
+                                          TextFormField(
+                                            autofocus: false,
+                                            // controller: controller
+                                            //     .lastNameController,
+                                            decoration: InputDecoration(
+                                              contentPadding: EdgeInsets.all(15),
+                                              hintText: "No.of  Red cards",
+                                              hintStyle: TextStyle(fontSize: 16, color: Colors.grey),
+                                              border: OutlineInputBorder(
+                                                borderRadius: BorderRadius.all(Radius.circular(8)),
+                                              ),
+                                            ),
+                                            keyboardType: TextInputType.number,
+                                            onChanged: (value) {
+                                              // You can perform actions when the text changes
+                                            },
+                                            validator: (value) {
+                                              if (value == null || value.isEmpty) {
+                                                return "Please enter valid text";
+                                              }
+
+                                              // You can add additional validation if needed
+
+                                              return null;
+                                            },
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+
+//Skill name
+                            Padding(
+                              padding: getPadding(left: 15, top: 5, right: 18),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Padding(
+                                    padding: getPadding(left: 7, top: 10, bottom: 5),
+                                    child: Text(
+                                      "Skill Name",
+                                      style: theme.textTheme.titleMedium,
+                                    ),
+                                  ),
+                                  TextFormField(
+                                    autofocus: false,
+                                    // controller: controller
+                                    //     .lastNameController,
+                                    decoration: InputDecoration(
+                                      contentPadding: EdgeInsets.all(15),
+                                      hintText: "Enter the skill name",
+                                      hintStyle: TextStyle(fontSize: 16, color: Colors.grey),
+                                      border: OutlineInputBorder(
+                                        borderRadius: BorderRadius.all(Radius.circular(8)),
+                                      ),
+                                    ),
+                                    keyboardType: TextInputType.text,
+                                    onChanged: (value) {
+                                      // You can perform actions when the text changes
+                                    },
+                                    validator: (value) {
+                                      if (value == null || value.isEmpty) {
+                                        return "Please enter valid goal";
+                                      }
+
+                                      // You can add additional validation if needed
+
+                                      return null;
+                                    },
+                                  ),
+                                ],
+                              ),
+                            ),
+
+ //skill level
+                            Padding(
+                              padding: getPadding(left: 15, top: 5, right: 18),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Padding(
+                                    padding: getPadding(left: 7, top: 10, bottom: 5),
+                                    child: Text(
+                                      "Skill Level",
+                                      style: theme.textTheme.titleMedium,
+                                    ),
+                                  ),
+                                  DropdownButtonFormField<String>(
+                                    value: selectskilllevel,
+                                    onChanged: (value) {
+                                      setState(() {
+                                        selectskilllevel = value;
+                                      });
+                                    },
+                                    items: level.map<DropdownMenuItem<String>>((String game) {
+                                      return DropdownMenuItem<String>(
+                                        value: game,
+                                        child: Text(game),
+                                      );
+                                    }).toList(),
+                                    decoration: InputDecoration(
+                                      contentPadding: EdgeInsets.all(15),
+                                      hintText: "Select skill Level",
+                                      hintStyle: TextStyle(fontSize: 16, color: Colors.grey),
+                                      border: OutlineInputBorder(
+                                        borderRadius: BorderRadius.all(Radius.circular(8)),
+                                      ),
+                                    ),
+                                    validator: (value) {
+                                      if (value == null || value.isEmpty) {
+                                        return "Please select a game";
+                                      }
+
+                                      // You can add additional validation if needed
+
+                                      return null;
+                                    },
+                                  ),
+                                ],
+                              ),
+                            ),
+  //Descrption
+                            Padding(
+                              padding: getPadding(left: 15, top: 5, right: 18),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Padding(
+                                    padding: getPadding(left: 7, top: 10, bottom: 5),
+                                    child: Text(
+                                      "Description",
+                                      style: theme.textTheme.titleMedium,
+                                    ),
+                                  ),
+
+                                ],
+                              ),
+                            ),
+
                           ])))));
   }
 
   void onTapNext() {}
 }
+
+
+
+

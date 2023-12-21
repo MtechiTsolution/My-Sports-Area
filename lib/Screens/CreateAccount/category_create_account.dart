@@ -7,8 +7,9 @@ import '../../theme/custom_button_style.dart';
 import '../../theme/custom_text_style.dart';
 import '../../theme/theme_helper.dart';
 import '../../widgets/custom_elevated_button.dart';
-import 'inputdetail.dart';
-import 'package:flutter/material.dart';
+import 'Sequerty_question.dart';
+import 'player_data/inputdetail.dart';
+
 
 // ... other imports ...
 
@@ -27,14 +28,15 @@ class _Category_selection_screenState extends State<Category_selection_screen> {
 
   @override
   Widget build(BuildContext context) {
-    final double containerHeight = getVerticalSize(MediaQuery.of(context).size.height); // FIGMA_DESIGN_HEIGHT
+    final double containerHeight =
+        getVerticalSize(MediaQuery.of(context).size.height); // FIGMA_DESIGN_HEIGHT
     final double containerWidth = getHorizontalSize(393); // FIGMA_DESIGN_WIDTH
 
     return SafeArea(
       child: Scaffold(
         backgroundColor: theme.colorScheme.primaryContainer,
         body: Container(
-          height: MediaQuery.of(context).size.height*0.8,
+          height: MediaQuery.of(context).size.height * 0.8,
           width: containerWidth,
           padding: getPadding(left: 17, right: 17),
           child: Container(
@@ -54,7 +56,7 @@ class _Category_selection_screenState extends State<Category_selection_screen> {
                   child: SizedBox(
                     width: getHorizontalSize(122),
                     child: Text(
-                      enUs["lbl_create_account"]!,
+                      "Create Account",
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
                       textAlign: TextAlign.center,
@@ -65,7 +67,7 @@ class _Category_selection_screenState extends State<Category_selection_screen> {
                 Padding(
                   padding: getPadding(left: 7, top: 34, bottom: 10),
                   child: Text(
-                    enUs["msg_select_catagory"]!,
+                    "Select  Category ",
                     style: CustomTextStyles.titleSmall,
                   ),
                 ),
@@ -75,7 +77,9 @@ class _Category_selection_screenState extends State<Category_selection_screen> {
                     InkWell(
                       onTap: () {
                         setState(() {
-                          isPlayerSelected = !isPlayerSelected;
+                          isPlayerSelected = true;
+                          isCoachSelected = false;
+                          isClubSelected = false;
                         });
                       },
                       child: _buildCategorySelectionItem(
@@ -88,7 +92,9 @@ class _Category_selection_screenState extends State<Category_selection_screen> {
                     InkWell(
                       onTap: () {
                         setState(() {
-                          isCoachSelected = !isCoachSelected;
+                          isPlayerSelected = false;
+                          isCoachSelected = true;
+                          isClubSelected = false;
                         });
                       },
                       child: _buildCategorySelectionItem(
@@ -101,7 +107,9 @@ class _Category_selection_screenState extends State<Category_selection_screen> {
                     InkWell(
                       onTap: () {
                         setState(() {
-                          isClubSelected = !isClubSelected;
+                          isPlayerSelected = false;
+                          isCoachSelected = false;
+                          isClubSelected = true;
                         });
                       },
                       child: _buildCategorySelectionItem(
@@ -183,8 +191,17 @@ class _Category_selection_screenState extends State<Category_selection_screen> {
   }
 
   void onTapNext() {
-    Navigator.push(context, MaterialPageRoute(builder: (context) => Input_Account_Detail()));
+    if (isPlayerSelected) {
+      Navigator.push(context, MaterialPageRoute(builder: (context) => Input_Account_Detail()));
+    } else if (isCoachSelected) {
+      Navigator.push(context, MaterialPageRoute(builder: (context) => SecurityQuestionScreen()));
+    } else if (isClubSelected) {
+      Navigator.push(context, MaterialPageRoute(builder: (context) => Input_Account_Detail()));
+    }
     // Implement your logic for handling the "Next" button tap here
   }
 }
+
+
+
 
