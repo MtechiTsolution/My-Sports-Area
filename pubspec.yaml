@@ -51,6 +51,7 @@ dependencies:
   flutter_reaction_button: ^3.0.0+2
   audioplayers: ^5.2.0
   appinio_video_player: ^1.2.2
+  image_picker: ^1.0.5
 
 
 dev_dependencies:

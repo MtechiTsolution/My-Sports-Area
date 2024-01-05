@@ -297,7 +297,7 @@ class ImageConstant {
 
   // Common images
   static String imgWhatsappimage20230815 =
-      '$imagePath/img_whatsappimage20230815.png';
+      '$imagePath/logonew.png';
 
   static String imglogo =
       '$imagePath/logo.png';

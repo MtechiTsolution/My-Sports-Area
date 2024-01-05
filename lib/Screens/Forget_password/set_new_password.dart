@@ -1,15 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:my_sports_app/Screens/Login.dart';
-
 import '../../Utils/image_constant.dart';
-import '../../localization/en_us/en_us_translations.dart';
 import '../../theme/app_decoration.dart';
 import '../../theme/custom_button_style.dart';
 import '../../theme/custom_text_style.dart';
 import '../../theme/theme_helper.dart';
 import '../../widgets/custom_elevated_button.dart';
 import '../../widgets/custom_image_view.dart';
+import '../Authentication/player_auth/Login.dart';
 
 class NewPassword extends StatefulWidget {
   const NewPassword({Key? key}) : super(key: key);

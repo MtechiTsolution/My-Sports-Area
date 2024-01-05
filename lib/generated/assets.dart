@@ -266,10 +266,10 @@ class Assets {
   static const String imagesImgVolume = 'assets/images/img_volume.svg';
   static const String imagesImgVolume1 = 'assets/images/img_volume1.png';
   static const String imagesImgWhatsapp1 = 'assets/images/img_whatsapp1.png';
-  static const String imagesImgWhatsappimage20230815 = 'assets/images/img_whatsappimage20230815.png';
   static const String imagesImgWorld1 = 'assets/images/img_world1.png';
   static const String imagesLock = 'assets/images/lock.png';
   static const String imagesLogo = 'assets/images/logo.png';
+  static const String imagesLogonew = 'assets/images/logonew.png';
   static const String imagesNewpassword = 'assets/images/newpassword.png';
   static const String imagesQuestionMark = 'assets/images/question_mark.png';
   static const String imagesUploadImage = 'assets/images/upload_image.png';
@@ -287,22 +287,20 @@ class Assets {
   static const String notificationsNotification = 'lib/Screens/Notifications/notification.dart';
   static const String notificationsNotificationSetting = 'lib/Screens/Notifications/notification_setting.dart';
   static const String offersAndApplicationsOffersAndApplication = 'lib/Screens/Offers_and_applications/offers_and_application.dart';
-  static const String playerDataInformationPeroformance = 'lib/Screens/CreateAccount/player_data/Information_peroformance.dart';
-  static const String playerDataInputdetail = 'lib/Screens/CreateAccount/player_data/inputdetail.dart';
-  static const String playerDataSetProfile = 'lib/Screens/CreateAccount/player_data/set_profile.dart';
+  static const String playerAuthInformationPeroformance = 'lib/Screens/Authentication/player_auth/tabchanger_create_ac.dart';
+  static const String playerAuthLogin = 'lib/Screens/Authentication/player_auth/Login.dart';
+  static const String playerAuthPlayerInputdetail = 'lib/Screens/Authentication/player_auth/player_inputdetail.dart';
+  static const String playerAuthSetProfile = 'lib/Screens/Authentication/player_auth/set_profile.dart';
   static const String postUploadUploadPostOne = 'lib/Screens/Post_Upload/upload_post_one.dart';
   static const String postUploadUploadVideo = 'lib/Screens/Post_Upload/upload_video.dart';
   static const String relationshipClubProfile = 'lib/Screens/Relationship/club_profile.dart';
   static const String relationshipRelationship = 'lib/Screens/Relationship/relationship.dart';
+  static const String sabwidgetsAddskill = 'lib/Screens/CreateAccount/widgets/sabwidgets/_addskill.dart';
   static const String screensCustomBottombar = 'lib/Screens/CustomBottombar.dart';
   static const String screensHome = 'lib/Screens/Home.dart';
-  static const String screensLogin = 'lib/Screens/Login.dart';
   static const String screensPlayerProfile = 'lib/Screens/player_profile.dart';
   static const String settingPrivacy = 'lib/Screens/Setting/privacy.dart';
   static const String settingSetting = 'lib/Screens/Setting/setting.dart';
-  static const String spalshScreenClub = 'lib/Screens/spalshScreen/club.dart';
-  static const String spalshScreenCoach = 'lib/Screens/spalshScreen/coach.dart';
-  static const String spalshScreenPlayer = 'lib/Screens/spalshScreen/player.dart';
   static const String spalshScreenSplash = 'lib/Screens/spalshScreen/splash.dart';
   static const String themeAppDecoration = 'lib/theme/app_decoration.dart';
   static const String themeCustomButtonStyle = 'lib/theme/custom_button_style.dart';
@@ -311,6 +309,7 @@ class Assets {
   static const String utilsImageConstant = 'lib/Utils/image_constant.dart';
   static const String utilsPrefUtils = 'lib/Utils/pref_utils.dart';
   static const String utilsSizeUtils = 'lib/Utils/size_utils.dart';
+  static const String utilsThem = 'lib/Utils/them.dart';
   static const String utilsValidationFunctions = 'lib/Utils/validation_functions.dart';
   static const String widgetClub = 'lib/Screens/Relationship/widget/_club.dart';
   static const String widgetsAcceptOffer = 'lib/Screens/Offers_and_applications/widgets/Accept_offer.dart';
@@ -335,13 +334,13 @@ class Assets {
   static const String widgetsMessageItem = 'lib/Screens/Messaging/widgets/message_item.dart';
   static const String widgetsOfferView = 'lib/Screens/Offers_and_applications/widgets/offer_view.dart';
   static const String widgetsOffers = 'lib/Screens/Offers_and_applications/widgets/offers.dart';
-  static const String widgetsPerformance = 'lib/Screens/CreateAccount/widgets/performance.dart';
   static const String widgetsPostItem = 'lib/Screens/HomeScreen/widgets/post_item.dart';
   static const String widgetsPostItem2 = 'lib/Screens/HomeScreen/widgets/post_item2.dart';
   static const String widgetsScoreItem = 'lib/Screens/HomeScreen/widgets/score_item.dart';
   static const String widgetsShareOptionLinks = 'lib/Screens/HomeScreen/widgets/share_option_links.dart';
+  static const String widgetsSkill = 'lib/Screens/CreateAccount/widgets/skill.dart';
   static const String widgetsTextSendBox = 'lib/Screens/Messaging/widgets/text_send_box.dart';
   static const String widgetsVideoItem = 'lib/Screens/HomeScreen/widgets/video_item.dart';
-  static const String widgetsWork = 'lib/Screens/CreateAccount/widgets/work.dart';
+  static const String widgetsWork = 'lib/Screens/CreateAccount/widgets/Achievements.dart';
 
 }

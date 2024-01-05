@@ -758,6 +758,19 @@ class CustomTextStyles {
   static get titleSmall_2 => theme.textTheme.titleSmall!;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 extension on TextStyle {
   TextStyle get krub {
     return copyWith(

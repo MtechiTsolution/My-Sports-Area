@@ -12,14 +12,14 @@ import '../../../widgets/custom_image_view.dart';
 import '../../../widgets/custom_text_form_field.dart';
 import '../sport_category_info.dart';
 
-class TabWork extends StatefulWidget {
-  const TabWork({super.key});
+class Achievements extends StatefulWidget {
+  const Achievements({super.key});
 
   @override
-  State<TabWork> createState() => _TabWorkState();
+  State<Achievements> createState() => _AchievementsState();
 }
 
-class _TabWorkState extends State<TabWork> {
+class _AchievementsState extends State<Achievements> {
   String? selectedPosition;
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,7 @@ class _TabWorkState extends State<TabWork> {
       SafeArea(
           child: Scaffold(
               resizeToAvoidBottomInset: false,
-              backgroundColor: theme.colorScheme.primaryContainer,
+              backgroundColor: Theme.of(context).colorScheme.background,
               body: Form(
                 //key: _formKey,
                   child: SingleChildScrollView(
@@ -48,7 +48,7 @@ class _TabWorkState extends State<TabWork> {
                                               children: [
                                                 Padding(
                                                     padding: getPadding(bottom: 1),
-                                                    child: Text("Currently licensed",
+                                                    child: Text("Obtained Diploma",
                                                         style: CustomTextStyles
                                                             .labelLargePoppins)),
 

@@ -4,18 +4,18 @@ import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
 import 'package:my_sports_app/Screens/Forget_password/forget_pass_mail.dart';
 import 'package:my_sports_app/localization/en_us/en_us_translations.dart';
 
-import '../Utils/image_constant.dart';
-import '../Utils/size_utils.dart';
-import '../Utils/validation_functions.dart';
-import '../theme/custom_button_style.dart';
-import '../theme/custom_text_style.dart';
-import '../theme/theme_helper.dart';
-import '../widgets/custom_elevated_button.dart';
-import '../widgets/custom_icon_button.dart';
-import '../widgets/custom_image_view.dart';
-import '../widgets/custom_text_form_field.dart';
-import 'Home.dart';
-import 'HomeScreen/HomeScreen.dart';
+import '../../../Utils/image_constant.dart';
+import '../../../Utils/size_utils.dart';
+import '../../../Utils/validation_functions.dart';
+import '../../../theme/custom_button_style.dart';
+import '../../../theme/custom_text_style.dart';
+import '../../../theme/theme_helper.dart';
+import '../../../widgets/custom_elevated_button.dart';
+import '../../../widgets/custom_icon_button.dart';
+import '../../../widgets/custom_image_view.dart';
+import '../../../widgets/custom_text_form_field.dart';
+import '../../Home.dart';
+import '../../HomeScreen/HomeScreen.dart';
 //
 // class Login extends StatefulWidget {
 //   const Login({super.key});
@@ -248,17 +248,17 @@ import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
 import 'package:my_sports_app/Screens/Forget_password/forget_pass_mail.dart';
 import 'package:my_sports_app/localization/en_us/en_us_translations.dart';
 
-import '../Utils/image_constant.dart';
-import '../Utils/size_utils.dart';
-import '../Utils/validation_functions.dart';
-import '../theme/custom_button_style.dart';
-import '../theme/custom_text_style.dart';
-import '../theme/theme_helper.dart';
-import '../widgets/custom_elevated_button.dart';
-import '../widgets/custom_icon_button.dart';
-import '../widgets/custom_image_view.dart';
-import '../widgets/custom_text_form_field.dart';
-import 'Home.dart';
+import '../../../Utils/image_constant.dart';
+import '../../../Utils/size_utils.dart';
+import '../../../Utils/validation_functions.dart';
+import '../../../theme/custom_button_style.dart';
+import '../../../theme/custom_text_style.dart';
+import '../../../theme/theme_helper.dart';
+import '../../../widgets/custom_elevated_button.dart';
+import '../../../widgets/custom_icon_button.dart';
+import '../../../widgets/custom_image_view.dart';
+import '../../../widgets/custom_text_form_field.dart';
+import '../../Home.dart';
 
 class Login extends StatefulWidget {
   const Login({Key? key});

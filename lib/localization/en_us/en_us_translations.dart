@@ -37,7 +37,10 @@ final Map<String, String> enUs = {
 
   // Acount Create page 1  Screen
   "msg_birthday_optional": "Birthday (optional)",
-  "lbl_with_login": "With login", "msg_confirm_password": "Confirm Password",
+  "lbl_with_login": "With login",
+  "msg_confirm_password": "Confirm Password",
+  "lbl_achievements": "achievements",
+  "lbl_injuries": "injuries",
 
   // Acount Create Two Screen
   "lbl_upload_image": "Upload image",
@@ -67,9 +70,9 @@ final Map<String, String> enUs = {
   "lbl_red_cards": "Red cards",
 
   // Acount Create Four - Tab Container Screen
-  "lbl_work": "Work", "lbl_performance": "Experience",
+  "lbl_work": "Achievements", "lbl_performance": "Experience",
 
-  "lbl_work": "Work", "lbl_skill": "Skill",
+  "lbl_work": "Achievements", "lbl_skill": "Skill",
 
   // Acount Create Five Screen
   "msg_sports_selection": "Sports selection",
