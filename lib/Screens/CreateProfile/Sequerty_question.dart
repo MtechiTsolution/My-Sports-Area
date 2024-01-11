@@ -35,7 +35,6 @@ class _SecurityQuestionScreenState extends State<SecurityQuestionScreen> {
       //   backgroundColor: Colors.white, // Change as needed
       // ),
 
-
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
@@ -47,13 +46,12 @@ class _SecurityQuestionScreenState extends State<SecurityQuestionScreen> {
                 alignment: Alignment.center,
                 child: Padding(
                   padding: const EdgeInsets.all(2.0),
-                  child: Text("Add",
-                      style: theme.textTheme.headlineMedium),
+                  child: Text("Add", style: theme.textTheme.headlineMedium),
                 ),
               ),
             ),
             Container(
-             // margin: EdgeInsets.only(top: 60),
+              // margin: EdgeInsets.only(top: 60),
               child: Align(
                 alignment: Alignment.center,
                 child: Padding(
@@ -80,31 +78,44 @@ class _SecurityQuestionScreenState extends State<SecurityQuestionScreen> {
                 SecurityQuestionItem(
                   question: 'What is your favorite color?',
                   onSelectedChanged: onQuestionSelected,
-                  isSelected: selectedQuestions.contains('What is your favorite color?'),
+                  isSelected: selectedQuestions
+                      .contains('What is your favorite color?'),
                 ),
-                SizedBox(height: 10,),
+                SizedBox(
+                  height: 10,
+                ),
                 SecurityQuestionItem(
                   question: 'What is your pet\'s name?',
                   onSelectedChanged: onQuestionSelected,
-                  isSelected: selectedQuestions.contains('What is your pet\'s name?'),
+                  isSelected:
+                      selectedQuestions.contains('What is your pet\'s name?'),
                 ),
-                SizedBox(height: 10,),
+                SizedBox(
+                  height: 10,
+                ),
                 SecurityQuestionItem(
                   question: 'Where were you born?',
                   onSelectedChanged: onQuestionSelected,
-                  isSelected: selectedQuestions.contains('Where were you born?'),
+                  isSelected:
+                      selectedQuestions.contains('Where were you born?'),
                 ),
-                SizedBox(height: 10,),
+                SizedBox(
+                  height: 10,
+                ),
                 SecurityQuestionItem(
                   question: 'Who is your favorite author?',
                   onSelectedChanged: onQuestionSelected,
-                  isSelected: selectedQuestions.contains('Who is your favorite author?'),
+                  isSelected: selectedQuestions
+                      .contains('Who is your favorite author?'),
                 ),
-                SizedBox(height: 10,),
+                SizedBox(
+                  height: 10,
+                ),
                 SecurityQuestionItem(
                   question: 'What is your mother\'s maiden name?',
                   onSelectedChanged: onQuestionSelected,
-                  isSelected: selectedQuestions.contains('What is your mother\'s maiden name?'),
+                  isSelected: selectedQuestions
+                      .contains('What is your mother\'s maiden name?'),
                 ),
               ],
             ),
@@ -166,23 +177,26 @@ class _SecurityQuestionScreenState extends State<SecurityQuestionScreen> {
               alignment: Alignment.topRight,
               child: ElevatedButton(
                 onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>My_Interests()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => My_Interests()));
                   // Handle "NEXT" button click
                   // You can add your logic here
                 },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.pink, // Set the background color to pink
+                  backgroundColor:
+                      Colors.pink, // Set the background color to pink
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(18.0), // Set the corner radius
+                    borderRadius:
+                        BorderRadius.circular(18.0), // Set the corner radius
                   ),
                 ),
                 child: Padding(
-                  padding: const EdgeInsets.only(left: 18.0,right: 18,top: 5,bottom: 5),
+                  padding: const EdgeInsets.only(
+                      left: 18.0, right: 18, top: 5, bottom: 5),
                   child: Text('NEXT'),
                 ),
               ),
             )
-
           ],
         ),
       ),

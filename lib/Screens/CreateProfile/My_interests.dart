@@ -18,7 +18,8 @@ class My_Interests extends StatefulWidget {
 }
 
 class _My_InterestsState extends State<My_Interests> {
-  TextEditingController tableTennisController = TextEditingController(); // Define a controller
+  TextEditingController tableTennisController =
+      TextEditingController(); // Define a controller
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +30,7 @@ class _My_InterestsState extends State<My_Interests> {
         width: double.maxFinite,
         padding: getPadding(left: 16, right: 16),
         child: Container(
-          margin: getMargin(left: 3, bottom: 7,top: 50),
+          margin: getMargin(left: 3, bottom: 7, top: 50),
           padding: getPadding(left: 15, top: 24, right: 15, bottom: 24),
           decoration: AppDecoration.outlineBlack.copyWith(
             borderRadius: BorderRadiusStyle.roundedBorder8,
@@ -70,10 +71,10 @@ class _My_InterestsState extends State<My_Interests> {
                   backgroundColor: Colors.pink, // Set the button color to pink
                 ),
               ),
-
               Padding(
                 padding: getPadding(top: 54),
-                child: buildChipsListWidget(), // Call the method to build ChipsListWidget
+                child:
+                    buildChipsListWidget(), // Call the method to build ChipsListWidget
               ),
               CustomElevatedButton(
                 width: getHorizontalSize(96),
@@ -86,8 +87,6 @@ class _My_InterestsState extends State<My_Interests> {
                 },
                 alignment: Alignment.centerRight,
               ),
-
-
             ],
           ),
         ),
@@ -96,27 +95,26 @@ class _My_InterestsState extends State<My_Interests> {
   }
 
   void onTapSave() {
-    Navigator.push(context, MaterialPageRoute(builder: (context)=>Home()));
+    Navigator.push(context, MaterialPageRoute(builder: (context) => Home()));
   }
 
   // Define the method to create ChipsListWidget
   Widget buildChipsListWidget() {
-    return
-      ChipsListWidget(
-    chipList: [
-    ChipviewtableItemModel(label: 'cricket'),
-    ChipviewtableItemModel(label: 'football'),
-    ChipviewtableItemModel(label: 'hockey'),
-    ChipviewtableItemModel(label: 'volleyball'),
-    ChipviewtableItemModel(label: 'Table Tennis'),
-    ChipviewtableItemModel(label: 'cricket'),
-    ChipviewtableItemModel(label: 'Badminton'),
-    ChipviewtableItemModel(label: 'Field Hockey'),
-    ChipviewtableItemModel(label: 'Tennis'),
-    ChipviewtableItemModel(label: 'Badminton'),
-    ChipviewtableItemModel(label: 'Gym'),
-    ChipviewtableItemModel(label: 'Tennis'),
-    ],
+    return ChipsListWidget(
+      chipList: [
+        ChipviewtableItemModel(label: 'cricket'),
+        ChipviewtableItemModel(label: 'football'),
+        ChipviewtableItemModel(label: 'hockey'),
+        ChipviewtableItemModel(label: 'volleyball'),
+        ChipviewtableItemModel(label: 'Table Tennis'),
+        ChipviewtableItemModel(label: 'cricket'),
+        ChipviewtableItemModel(label: 'Badminton'),
+        ChipviewtableItemModel(label: 'Field Hockey'),
+        ChipviewtableItemModel(label: 'Tennis'),
+        ChipviewtableItemModel(label: 'Badminton'),
+        ChipviewtableItemModel(label: 'Gym'),
+        ChipviewtableItemModel(label: 'Tennis'),
+      ],
     );
   }
 }
@@ -133,7 +131,8 @@ class ChipsListWidget extends StatelessWidget {
       spacing: getHorizontalSize(8),
       children: chipList.map((model) {
         return Chip(
-          label: Text(model.label), // Replace with the actual property of your model.
+          label: Text(
+              model.label), // Replace with the actual property of your model.
           // Customize the appearance of the Chip as needed.
         );
       }).toList(),
@@ -146,5 +145,3 @@ class ChipviewtableItemModel {
 
   ChipviewtableItemModel({required this.label});
 }
-
-

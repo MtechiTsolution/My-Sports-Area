@@ -153,9 +153,8 @@
 //
 //
 
-
 import 'package:flutter/material.dart';
-import 'package:my_sports_app/Screens/CreateAccount/widgets/Customdropdown.dart';
+import 'package:my_sports_app/Screens/CreateProfile/widgets/Customdropdown.dart';
 import 'package:my_sports_app/localization/en_us/en_us_translations.dart';
 
 import '../../Utils/image_constant.dart';
@@ -170,10 +169,14 @@ import 'Sequerty_question.dart';
 
 // Define a custom controller class
 class MyController {
-  final ValueNotifier<String> dropdownItemList = ValueNotifier<String>("Football");
-  final ValueNotifier<String> dropdownItemList1 = ValueNotifier<String>("Cricket");
-  final ValueNotifier<String> dropdownItemList2 = ValueNotifier<String>("Baskit ball");
-  final ValueNotifier<String> dropdownItemList3 = ValueNotifier<String>("Hockey");
+  final ValueNotifier<String> dropdownItemList =
+      ValueNotifier<String>("Football");
+  final ValueNotifier<String> dropdownItemList1 =
+      ValueNotifier<String>("Cricket");
+  final ValueNotifier<String> dropdownItemList2 =
+      ValueNotifier<String>("Baskit ball");
+  final ValueNotifier<String> dropdownItemList3 =
+      ValueNotifier<String>("Hockey");
 
 // Add other properties and methods as needed
 }
@@ -198,11 +201,13 @@ class _Sports_Category_infoState extends State<Sports_Category_info> {
           width: double.maxFinite,
           padding: getPadding(left: 17, right: 17),
           child: Container(
-            margin: getMargin(right: 1, bottom: MediaQuery.of(context).size.height*0.2,top: MediaQuery.of(context).size.height*0.1),
-            padding: getPadding(
-                left: 15, top: 20, right: 15, bottom: 20),
-            decoration: AppDecoration.outlineBlack.copyWith(
-                borderRadius: BorderRadiusStyle.roundedBorder8),
+            margin: getMargin(
+                right: 1,
+                bottom: MediaQuery.of(context).size.height * 0.2,
+                top: MediaQuery.of(context).size.height * 0.1),
+            padding: getPadding(left: 15, top: 20, right: 15, bottom: 20),
+            decoration: AppDecoration.outlineBlack
+                .copyWith(borderRadius: BorderRadiusStyle.roundedBorder8),
             child: Column(
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -222,11 +227,12 @@ class _Sports_Category_infoState extends State<Sports_Category_info> {
                       style: CustomTextStyles.titleSmallInterSemiBold),
                 ),
                 CustomDropDown(
-
                   margin: getMargin(left: 3, top: 5),
-                  hintText:enUs[ "msg_select_appointment"]!,
+                  hintText: enUs["msg_select_appointment"]!,
                   hintStyle: CustomTextStyles.bodyMediumPoppinsLight,
-                  items: [myController.dropdownItemList3.value], // Wrap in a list
+                  items: [
+                    myController.dropdownItemList3.value
+                  ], // Wrap in a list
                   onChanged: (value) {
                     myController.dropdownItemList3.value = value ?? "";
                     // Handle your logic here when the dropdown value changes
@@ -237,7 +243,7 @@ class _Sports_Category_infoState extends State<Sports_Category_info> {
                   child: Text(enUs["lbl_selections"]!,
                       style: CustomTextStyles.titleSmallInterSemiBold),
                 ),
-               CustomDropDown(
+                CustomDropDown(
                   // icon: Container(
                   //   margin: getMargin(left: 30, right: 13),
                   //   child: CustomImageView(
@@ -245,9 +251,11 @@ class _Sports_Category_infoState extends State<Sports_Category_info> {
                   //   ),
                   // ),
                   margin: getMargin(left: 3, top: 5),
-                  hintText:enUs[ "msg_select_appointment"]!,
+                  hintText: enUs["msg_select_appointment"]!,
                   hintStyle: CustomTextStyles.bodyMediumPoppinsLight,
-                  items: [myController.dropdownItemList3.value], // Wrap in a list
+                  items: [
+                    myController.dropdownItemList3.value
+                  ], // Wrap in a list
                   onChanged: (value) {
                     myController.dropdownItemList3.value = value ?? "";
                     // Handle your logic here when the dropdown value changes
@@ -260,9 +268,11 @@ class _Sports_Category_infoState extends State<Sports_Category_info> {
                 ),
                 CustomDropDown(
                   margin: getMargin(left: 3, top: 5),
-                  hintText:enUs[ "msg_select_appointment"]!,
+                  hintText: enUs["msg_select_appointment"]!,
                   hintStyle: CustomTextStyles.bodyMediumPoppinsLight,
-                  items: [myController.dropdownItemList3.value], // Wrap in a list
+                  items: [
+                    myController.dropdownItemList3.value
+                  ], // Wrap in a list
                   onChanged: (value) {
                     myController.dropdownItemList3.value = value ?? "";
                     // Handle your logic here when the dropdown value changes
@@ -281,15 +291,16 @@ class _Sports_Category_infoState extends State<Sports_Category_info> {
                   //   ),
                   // ),
                   margin: getMargin(left: 3, top: 5),
-                  hintText:enUs[ "msg_select_appointment"]!,
+                  hintText: enUs["msg_select_appointment"]!,
                   hintStyle: CustomTextStyles.bodyMediumPoppinsLight,
-                  items: [myController.dropdownItemList3.value], // Wrap in a list
+                  items: [
+                    myController.dropdownItemList3.value
+                  ], // Wrap in a list
                   onChanged: (value) {
                     myController.dropdownItemList3.value = value ?? "";
                     // Handle your logic here when the dropdown value changes
                   },
                 ),
-
                 Spacer(),
                 CustomElevatedButton(
                   width: getHorizontalSize(96),
@@ -305,15 +316,13 @@ class _Sports_Category_infoState extends State<Sports_Category_info> {
               ],
             ),
           ),
-
         ),
       ),
     );
   }
 
   void onTapNext() {
-    Navigator.push(context, MaterialPageRoute(builder: (context)=>SecurityQuestionScreen()));
-
+    Navigator.push(context,
+        MaterialPageRoute(builder: (context) => SecurityQuestionScreen()));
   }
 }
-

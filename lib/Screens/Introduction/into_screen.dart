@@ -1,56 +1,8 @@
-// import 'package:flutter/material.dart';
-//
-// import '../../Utils/image_constant.dart';
-// import '../../Utils/size_utils.dart';
-// import '../../main.dart';
-// import '../../theme/theme_helper.dart';
-// import '../../widgets/custom_image_view.dart';
-//
-// class SplashScreen extends StatefulWidget {
-//   @override
-//   _SplashScreenState createState() => _SplashScreenState();
-// }
-//
-// class _SplashScreenState extends State<SplashScreen> {
-//   @override
-//   void initState() {
-//     super.initState();
-//     // Add a delay of 3 seconds before navigating to the main screen
-//     Future.delayed(Duration(seconds: 5), () {
-//       Navigator.of(context).pushReplacement(
-//         MaterialPageRoute(
-//           builder: (context) => MyApp(),
-//         ),
-//       );
-//     });
-//   }
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     return
-//
-//       SafeArea(
-//           child: Scaffold(
-//               backgroundColor: theme.colorScheme.primaryContainer,
-//               body:  Center(
-//                 child: CustomImageView(
-//                     imagePath: ImageConstant.imgWhatsappimage20230815,
-//                     height: getVerticalSize(170),
-//                     width: getHorizontalSize(224),
-//                     alignment: Alignment.topCenter,
-//                     margin: getMargin(top: 314)),
-//               ),
-//           ));
-//   }
-// }
-//
-//
-
-
 import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:my_sports_app/Utils/pref_utils.dart';
 
 import '../../Utils/image_constant.dart';
 import '../../Utils/size_utils.dart';
@@ -59,31 +11,17 @@ import '../../theme/app_decoration.dart';
 import '../../theme/custom_text_style.dart';
 import '../../theme/theme_helper.dart';
 import '../../widgets/custom_image_view.dart';
-import '../../main.dart'; // Import your main.dart or the destination screen file
-import 'dart:async';
+import '../category_create_account.dart'; // Import your main.dart or the destination screen file
 
-import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-
-import '../../Utils/image_constant.dart';
-import '../../Utils/size_utils.dart';
-import '../../localization/en_us/en_us_translations.dart';
-import '../../theme/app_decoration.dart';
-import '../../theme/custom_text_style.dart';
-import '../../theme/theme_helper.dart';
-import '../../widgets/custom_image_view.dart';
-import '../../main.dart';
-import '../CreateAccount/category_create_account.dart'; // Import your main.dart or the destination screen file
-
-class SplashScreen extends StatefulWidget {
-  const SplashScreen({Key? key}) : super(key: key);
+class IntroScreen extends StatefulWidget {
+  const IntroScreen({Key? key}) : super(key: key);
 
   @override
-  _SplashScreenState createState() => _SplashScreenState();
+  _IntroScreenState createState() => _IntroScreenState();
 }
 
-class _SplashScreenState extends State<SplashScreen> {
-  late List<SplashData> splashDataList;
+class _IntroScreenState extends State<IntroScreen> {
+  late List<IntroData> splashDataList;
   late int currentIndex;
 
   @override
@@ -91,17 +29,17 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
     currentIndex = 0;
     splashDataList = [
-      SplashData(
+      IntroData(
         title: enUs["lbl_player"]!,
         message: enUs["msg_lorem_ipsum_dolor"]!,
         imagePath: ImageConstant.imgGroup994,
       ),
-      SplashData(
+      IntroData(
         title: enUs["lbl_coach"]!,
         message: enUs["msg_lorem_ipsum_dolor"]!,
         imagePath: ImageConstant.img2b091d39c676d6e,
       ),
-      SplashData(
+      IntroData(
         title: "Club",
         message: enUs["msg_lorem_ipsum_dolor"]!,
         imagePath: ImageConstant.imgGroup997,
@@ -115,6 +53,7 @@ class _SplashScreenState extends State<SplashScreen> {
       } else {
         currentIndex = 0;
       }
+      //if (mounted) return;
       setState(() {});
     });
 
@@ -125,9 +64,10 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   void navigateToMainScreen() {
+    PrefUtils().setShowInro(true);
     Navigator.of(context).pushReplacement(
       MaterialPageRoute(
-        builder: (context) => CategorySelectionScreen(),
+        builder: (context) => const CategorySelectionScreen(),
       ),
     );
   }
@@ -197,8 +137,8 @@ class _SplashScreenState extends State<SplashScreen> {
                             maxLines: 10,
                             overflow: TextOverflow.ellipsis,
                             textAlign: TextAlign.center,
-                            style:
-                            CustomTextStyles.titleMediumPoppinsPrimaryContainerMedium,
+                            style: CustomTextStyles
+                                .titleMediumPoppinsPrimaryContainerMedium,
                           ),
                         ),
                       ],
@@ -236,22 +176,22 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 }
 
-class SplashData {
+class IntroData {
   final String title;
   final String message;
   final String imagePath;
 
-  SplashData({
+  IntroData({
     required this.title,
     required this.message,
     required this.imagePath,
   });
 }
 
-void main() {
-  SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
-  runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: SplashScreen(),
-  ));
-}
+// void main() {
+//   SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
+//   runApp(MaterialApp(
+//     debugShowCheckedModeBanner: false,
+//     home: IntroScreen(),
+//   ));
+// }

@@ -66,7 +66,8 @@ class SkillAddState extends State<SkillAdd> {
     required Function(String?) onChanged,
   }) {
     return Padding(
-      padding: getPadding(left: 0, top: 5, right: 0), // Adjusted padding for skill section
+      padding: getPadding(
+          left: 0, top: 5, right: 0), // Adjusted padding for skill section
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,
@@ -75,7 +76,8 @@ class SkillAddState extends State<SkillAdd> {
             padding: getPadding(left: 7, top: 10, bottom: 5),
             child: Text(
               label,
-              style: labelText.Lebl_Text(false), // Set isDarkMode to false for simplicity
+              style: labelText.Lebl_Text(
+                  false), // Set isDarkMode to false for simplicity
             ),
           ),
           if (items != null)

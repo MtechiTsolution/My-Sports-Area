@@ -282,8 +282,6 @@ import '../../widgets/custom_image_view.dart';
 import '../../widgets/custom_text_form_field.dart';
 import '../Authentication/player_auth/tabchanger_create_ac.dart';
 
-
-
 class LastClubPlayed extends StatefulWidget {
   const LastClubPlayed({Key? key});
 
@@ -292,7 +290,7 @@ class LastClubPlayed extends StatefulWidget {
 }
 
 class _LastClubPlayedState extends State<LastClubPlayed> {
-  String? selectedPosition;  // Added to store the selected position value
+  String? selectedPosition; // Added to store the selected position value
   TextEditingController _dateController = TextEditingController();
   //DateTime selectedDate = DateTime.now();
   DateTime? selectedDate;
@@ -336,7 +334,8 @@ class _LastClubPlayedState extends State<LastClubPlayed> {
                     alignment: Alignment.topRight,
                     child: Text(
                       enUs["msg_last_club_played"]!,
-                      style: CustomTextStyles.titleMediumPoppinsBlack90001Medium16,
+                      style:
+                          CustomTextStyles.titleMediumPoppinsBlack90001Medium16,
                     ),
                   ),
                   Align(
@@ -354,7 +353,6 @@ class _LastClubPlayedState extends State<LastClubPlayed> {
               hintText: enUs["lbl_club_name2"]!,
               autofocus: false,
               contentPadding: EdgeInsets.all(15),
-
               hintStyle: CustomTextStyles.bodyMediumPoppinsLight,
               validator: (value) {
                 if (!isText(value)) {
@@ -386,7 +384,8 @@ class _LastClubPlayedState extends State<LastClubPlayed> {
             ),
             DropdownButton<String>(
               isExpanded: true,
-              value: selectedPosition, // Replace with your selected value variable
+              value:
+                  selectedPosition, // Replace with your selected value variable
               items: [
                 "Position 1",
                 "Position 2",
@@ -398,9 +397,11 @@ class _LastClubPlayedState extends State<LastClubPlayed> {
                   child: Text(value),
                 );
               }).toList(),
-              onChanged: (String? newValue) { // Change the parameter type to String?
+              onChanged: (String? newValue) {
+                // Change the parameter type to String?
                 setState(() {
-                  selectedPosition = newValue ?? ""; // Update the selected value (use empty string if null)
+                  selectedPosition = newValue ??
+                      ""; // Update the selected value (use empty string if null)
                 });
               },
             ),
@@ -419,20 +420,23 @@ class _LastClubPlayedState extends State<LastClubPlayed> {
                   CustomTextFormField(
                     width: getHorizontalSize(83),
                     hintText: enUs["lbl_12"]!,
-
                     autofocus: false,
                     hintStyle: CustomTextStyles.titleSmallInterSemiBold,
                     suffix: Container(
-                      margin: getMargin(left: 15, top: 15, right: 13, bottom: 12),
+                      margin:
+                          getMargin(left: 15, top: 15, right: 13, bottom: 12),
                       child: CustomImageView(
                         svgPath: ImageConstant.imgFrame,
                       ),
                     ),
-                    suffixConstraints: BoxConstraints(maxHeight: getVerticalSize(35)),
+                    suffixConstraints:
+                        BoxConstraints(maxHeight: getVerticalSize(35)),
                     contentPadding: EdgeInsets.all(15),
                     borderDecoration: TextFormFieldStyleHelper.fillGray,
                   ),
-                  SizedBox(width: 10,),
+                  SizedBox(
+                    width: 10,
+                  ),
                   CustomTextFormField(
                     width: getHorizontalSize(105),
                     autofocus: false,
@@ -440,16 +444,19 @@ class _LastClubPlayedState extends State<LastClubPlayed> {
                     contentPadding: EdgeInsets.all(15),
                     hintStyle: CustomTextStyles.titleSmallInterSemiBold,
                     suffix: Container(
-                      margin: getMargin(left: 15, top: 15, right: 14, bottom: 12),
+                      margin:
+                          getMargin(left: 15, top: 15, right: 14, bottom: 12),
                       child: CustomImageView(
                         svgPath: ImageConstant.imgFrame,
                       ),
                     ),
-                    suffixConstraints: BoxConstraints(maxHeight: getVerticalSize(35)),
-
+                    suffixConstraints:
+                        BoxConstraints(maxHeight: getVerticalSize(35)),
                     borderDecoration: TextFormFieldStyleHelper.fillGray,
                   ),
-                  SizedBox(width: 10,),
+                  SizedBox(
+                    width: 10,
+                  ),
                   CustomTextFormField(
                     width: getHorizontalSize(105),
                     autofocus: false,
@@ -457,13 +464,14 @@ class _LastClubPlayedState extends State<LastClubPlayed> {
                     contentPadding: EdgeInsets.all(15),
                     hintStyle: CustomTextStyles.titleSmallInterSemiBold,
                     suffix: Container(
-                      margin: getMargin(left: 15, top: 15, right: 14, bottom: 12),
+                      margin:
+                          getMargin(left: 15, top: 15, right: 14, bottom: 12),
                       child: CustomImageView(
                         svgPath: ImageConstant.imgFrame,
                       ),
                     ),
-                    suffixConstraints: BoxConstraints(maxHeight: getVerticalSize(35)),
-
+                    suffixConstraints:
+                        BoxConstraints(maxHeight: getVerticalSize(35)),
                     borderDecoration: TextFormFieldStyleHelper.fillGray,
                   ),
                 ],
@@ -483,20 +491,23 @@ class _LastClubPlayedState extends State<LastClubPlayed> {
                   CustomTextFormField(
                     width: getHorizontalSize(83),
                     hintText: enUs["lbl_12"]!,
-
                     autofocus: false,
                     hintStyle: CustomTextStyles.titleSmallInterSemiBold,
                     suffix: Container(
-                      margin: getMargin(left: 15, top: 15, right: 13, bottom: 12),
+                      margin:
+                          getMargin(left: 15, top: 15, right: 13, bottom: 12),
                       child: CustomImageView(
                         svgPath: ImageConstant.imgFrame,
                       ),
                     ),
-                    suffixConstraints: BoxConstraints(maxHeight: getVerticalSize(35)),
+                    suffixConstraints:
+                        BoxConstraints(maxHeight: getVerticalSize(35)),
                     contentPadding: EdgeInsets.all(15),
                     borderDecoration: TextFormFieldStyleHelper.fillGray,
                   ),
-                  SizedBox(width: 10,),
+                  SizedBox(
+                    width: 10,
+                  ),
                   CustomTextFormField(
                     width: getHorizontalSize(105),
                     autofocus: false,
@@ -504,16 +515,19 @@ class _LastClubPlayedState extends State<LastClubPlayed> {
                     contentPadding: EdgeInsets.all(15),
                     hintStyle: CustomTextStyles.titleSmallInterSemiBold,
                     suffix: Container(
-                      margin: getMargin(left: 15, top: 15, right: 14, bottom: 12),
+                      margin:
+                          getMargin(left: 15, top: 15, right: 14, bottom: 12),
                       child: CustomImageView(
                         svgPath: ImageConstant.imgFrame,
                       ),
                     ),
-                    suffixConstraints: BoxConstraints(maxHeight: getVerticalSize(35)),
-
+                    suffixConstraints:
+                        BoxConstraints(maxHeight: getVerticalSize(35)),
                     borderDecoration: TextFormFieldStyleHelper.fillGray,
                   ),
-                  SizedBox(width: 10,),
+                  SizedBox(
+                    width: 10,
+                  ),
                   CustomTextFormField(
                     width: getHorizontalSize(105),
                     autofocus: false,
@@ -521,13 +535,14 @@ class _LastClubPlayedState extends State<LastClubPlayed> {
                     contentPadding: EdgeInsets.all(15),
                     hintStyle: CustomTextStyles.titleSmallInterSemiBold,
                     suffix: Container(
-                      margin: getMargin(left: 15, top: 15, right: 14, bottom: 12),
+                      margin:
+                          getMargin(left: 15, top: 15, right: 14, bottom: 12),
                       child: CustomImageView(
                         svgPath: ImageConstant.imgFrame,
                       ),
                     ),
-                    suffixConstraints: BoxConstraints(maxHeight: getVerticalSize(35)),
-
+                    suffixConstraints:
+                        BoxConstraints(maxHeight: getVerticalSize(35)),
                     borderDecoration: TextFormFieldStyleHelper.fillGray,
                   ),
                 ],
@@ -537,7 +552,7 @@ class _LastClubPlayedState extends State<LastClubPlayed> {
               width: getHorizontalSize(96),
               height: getVerticalSize(40),
               text: enUs["lbl_next"]!,
-              margin: getMargin(top: 75, bottom: 32,right: 10),
+              margin: getMargin(top: 75, bottom: 32, right: 10),
               buttonStyle: CustomButtonStyles.fillPrimaryTL18,
               buttonTextStyle: CustomTextStyles.titleSmallPrimaryContainer,
               onTap: () {
@@ -553,9 +568,7 @@ class _LastClubPlayedState extends State<LastClubPlayed> {
 
   void onTapNext() {
     // Navigate to the next screen or perform the desired action here.
-     Navigator.push(context, MaterialPageRoute(builder: (context) => Tab_changer_acc()));
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => Tab_changer_acc()));
   }
 }
-
-
-

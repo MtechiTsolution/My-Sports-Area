@@ -1,11 +1,10 @@
-//ignore: unused_import    
+//ignore: unused_import
 import 'dart:convert';
-import 'dart:ui';
-import 'package:flutter/scheduler.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class PrefUtils {
   static SharedPreferences? _sharedPreferences;
+  static String token = '';
 
   PrefUtils() {
     // init();
@@ -15,7 +14,7 @@ class PrefUtils {
   }
 
   Future<void> init() async {
-    _sharedPreferences ??= await SharedPreferences.getInstance();
+    _sharedPreferences = await SharedPreferences.getInstance();
     print('SharedPreference Initialized');
   }
 
@@ -35,5 +34,21 @@ class PrefUtils {
       return 'primary';
     }
   }
+
+  Future<void> setShowInro(bool value) {
+    return _sharedPreferences!.setBool('showIntro', value);
+  }
+
+  bool getShowIntro() {
+    return _sharedPreferences!.getBool("showIntro") ?? false;
+  }
+
+  Future<void> setlogin(String value) {
+    return _sharedPreferences!.setString('token', value);
+  }
+
+  bool checklogin() {
+    token = _sharedPreferences!.getString("token") ?? '';
+    return token.isNotEmpty ? true : false;
+  }
 }
-    

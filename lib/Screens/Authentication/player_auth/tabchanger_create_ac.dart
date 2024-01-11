@@ -133,15 +133,15 @@
 //
 
 import 'package:flutter/material.dart';
-import 'package:my_sports_app/Screens/CreateAccount/widgets/skill.dart';
-import 'package:my_sports_app/Screens/CreateAccount/widgets/Achievements.dart';
+import 'package:my_sports_app/Screens/CreateProfile/widgets/skill.dart';
+import 'package:my_sports_app/Screens/CreateProfile/widgets/Achievements.dart';
 import 'package:my_sports_app/Utils/them.dart';
 import 'package:my_sports_app/localization/en_us/en_us_translations.dart';
 
 import '../../../Utils/size_utils.dart';
 import '../../../theme/app_decoration.dart';
 import '../../../theme/theme_helper.dart';
-import '../../CreateAccount/My_interests.dart';
+import '../../CreateProfile/My_interests.dart';
 
 class Tab_changer_acc extends StatefulWidget {
   const Tab_changer_acc({Key? key}) : super(key: key);
@@ -233,7 +233,8 @@ class _Tab_changer_accState extends State<Tab_changer_acc>
                             ),
                           ),
                         ),
-                        Tab( // New tab for Achievements
+                        Tab(
+                          // New tab for Achievements
                           child: Container(
                             width: MediaQuery.of(context).size.width * 0.25,
                             child: Text(
@@ -242,7 +243,8 @@ class _Tab_changer_accState extends State<Tab_changer_acc>
                             ),
                           ),
                         ),
-                        Tab( // New tab for Injuries
+                        Tab(
+                          // New tab for Injuries
                           child: Container(
                             width: MediaQuery.of(context).size.width * 0.25,
                             child: Text(
@@ -263,7 +265,6 @@ class _Tab_changer_accState extends State<Tab_changer_acc>
                         children: [
                           Skill(),
                           Achievements(),
-
                           Container(child: Text("Achievements Content")),
                           Container(child: Text("Injuries Content")),
                         ],
@@ -303,6 +304,3 @@ class _Tab_changer_accState extends State<Tab_changer_acc>
     );
   }
 }
-
-
-

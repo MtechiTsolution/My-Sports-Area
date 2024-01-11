@@ -11,7 +11,8 @@ final Map<String, String> enUs = {
   "lbl_tellus": "tellus",
   "lbl_8w": "8w",
   "lbl_like": "Like",
-  "msg_quis_hendrerit_dolor": "quis hendrerit dolor magna eget quis hendrerit dolor magna eget",
+  "msg_quis_hendrerit_dolor":
+      "quis hendrerit dolor magna eget quis hendrerit dolor magna eget",
   "lbl_view_1_reply": "View 1 reply",
 
   // Club Splash Screen
@@ -335,12 +336,9 @@ final Map<String, String> enUs = {
   "msg_question_10_out": "Question 10 out of 10",
   "lbl_1_22_mins": "1:22 mins",
   "lbl_8": "8",
-   //forget passowrd
+  //forget passowrd
   "lbl_new_password1": "New Password",
   "msg_confirm_password": "Confirm Password",
-
-
-
 
   // Entertainment Question Five Screen
   "lbl_40_mins_allowed": "40 mins allowed",
@@ -410,7 +408,6 @@ final Map<String, String> enUs = {
   "lbl_resend_code": "Resend code",
   "lbl_enter_otp": "Enter OTP",
   "lbl_1_3_mins": "1:3 mins", "lbl_next2": "next",
-
 
   "lbl_i_m_fine": "I’m Fine",
   "lbl_clary": "Clary",

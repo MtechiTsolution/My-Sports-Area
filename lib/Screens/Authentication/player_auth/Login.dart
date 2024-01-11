@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
-import 'package:my_sports_app/Screens/Forget_password/forget_pass_mail.dart';
+import 'package:my_sports_app/Screens/Authentication/player_auth/Forget_password/forget_pass_mail.dart';
 import 'package:my_sports_app/localization/en_us/en_us_translations.dart';
+import 'package:my_sports_app/models/User.dart';
+import 'package:my_sports_app/providers/UserProvider.dart';
+import 'package:my_sports_app/widgets/ios_dialogue.dart';
 
 import '../../../Utils/image_constant.dart';
 import '../../../Utils/size_utils.dart';
@@ -245,7 +248,7 @@ import '../../HomeScreen/HomeScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
-import 'package:my_sports_app/Screens/Forget_password/forget_pass_mail.dart';
+import 'package:my_sports_app/Screens/Authentication/player_auth/Forget_password/forget_pass_mail.dart';
 import 'package:my_sports_app/localization/en_us/en_us_translations.dart';
 
 import '../../../Utils/image_constant.dart';
@@ -268,6 +271,9 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
+  final _formKey = GlobalKey<FormState>();
+  TextEditingController emailController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     double screenHeight = MediaQuery.of(context).size.height;
@@ -278,7 +284,7 @@ class _LoginState extends State<Login> {
       backgroundColor: theme.colorScheme.primaryContainer,
       body: SingleChildScrollView(
         child: Form(
-          //key: _formKey,
+          key: _formKey,
           child: Container(
             width: double.maxFinite,
             padding: EdgeInsets.symmetric(
@@ -305,7 +311,6 @@ class _LoginState extends State<Login> {
                     height: screenHeight * 0.1,
                   ),
                 ),
-
                 Padding(
                   padding: const EdgeInsets.only(bottom: 18.0),
                   child: Text(
@@ -331,6 +336,7 @@ class _LoginState extends State<Login> {
                   ),
                 ),
                 CustomTextFormField(
+                  controller: emailController,
                   margin: EdgeInsets.only(top: screenHeight * 0.02),
                   hintText: enUs["lbl_email"]!,
                   textStyle: TextStyle(color: Colors.white),
@@ -346,7 +352,7 @@ class _LoginState extends State<Login> {
                     ),
                   ),
                   suffixConstraints:
-                  BoxConstraints(maxHeight: screenHeight * 0.048),
+                      BoxConstraints(maxHeight: screenHeight * 0.048),
                   validator: (value) {
                     if (value == null ||
                         (!isValidEmail(value, isRequired: true))) {
@@ -362,6 +368,7 @@ class _LoginState extends State<Login> {
                   fillColor: appTheme.black90001,
                 ),
                 CustomTextFormField(
+                  controller: passwordController,
                   margin: EdgeInsets.only(top: screenHeight * 0.02),
                   hintText: enUs["lbl_password"]!,
                   textStyle: TextStyle(color: Colors.white),
@@ -383,11 +390,10 @@ class _LoginState extends State<Login> {
                     ),
                   ),
                   suffixConstraints:
-                  BoxConstraints(maxHeight: screenHeight * 0.048),
+                      BoxConstraints(maxHeight: screenHeight * 0.048),
                   validator: (value) {
-                    if (value == null ||
-                        (!isValidEmail(value, isRequired: true))) {
-                      return "Please enter valid email";
+                    if (value == null || value.isEmpty) {
+                      return 'Please enter a password';
                     }
                     return null;
                   },
@@ -513,10 +519,22 @@ class _LoginState extends State<Login> {
     );
   }
 
-  void onTapSignin() {
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => Home()),
-    );
+  void onTapSignin() async {
+    if (_formKey.currentState!.validate()) {
+      showIosDialoge(context);
+      _formKey.currentState!.save();
+      UserLogin userData = UserLogin(
+          email: emailController.text, password: passwordController.text);
+      var res = await UserProvider().loginUser(userData);
+      Navigator.of(context).pop();
+      if (res) {
+        Navigator.of(context).pushAndRemoveUntil(
+          MaterialPageRoute(builder: (context) => Home()),
+          (route) => false,
+        );
+      } else {
+        showSnakbar(context);
+      }
+    }
   }
 }
