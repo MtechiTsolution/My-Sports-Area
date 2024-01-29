@@ -20,6 +20,8 @@ import '../../../theme/theme_helper.dart';
 import '../../../widgets/custom_icon_button.dart';
 import '../../../widgets/custom_image_view.dart';
 import '../../../widgets/custom_text_form_field.dart';
+import '../bio_player.dart';
+import '../select_game.dart';
 import 'Login.dart';
 
 class CreateAccount extends StatefulWidget {
@@ -56,8 +58,8 @@ class _CreateAccountState extends State<CreateAccount> {
           padding: getPadding(left: 17, right: 17),
           child: Container(
             margin: EdgeInsets.only(
-                top: MediaQuery.of(context).size.height * 0.09,
-                bottom: MediaQuery.of(context).size.height * 0.09),
+                top: MediaQuery.of(context).size.height * 0.08,
+                bottom: MediaQuery.of(context).size.height * 0.01),
             padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.02),
             decoration: AppDecoration.outlineBlack.copyWith(
               color: isDarkMode ? Colors.grey[800] : Colors.white,
@@ -215,7 +217,13 @@ class _CreateAccountState extends State<CreateAccount> {
                   buttonStyle: CustomButtonStyles.fillPink,
                   buttonTextStyle: ButtonText.button_Text(isDarkMode),
                   onTap: () {
-                    onTapCreateaccount(context);
+                    //onTapCreateaccount(context);
+
+                    //testing purpose
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Player_Bio()),
+                    );
                   },
                   alignment: Alignment.center,
                 ),
@@ -287,32 +295,48 @@ class _CreateAccountState extends State<CreateAccount> {
       ),
     );
   }
-
-  void onTapCreateaccount(BuildContext context) async {
-    if (_formKey.currentState!.validate()) {
-      showIosDialoge(context);
-      _formKey.currentState!.save();
-      UserRegistration userData = UserRegistration(
-          email: emailController.text,
-          firstName: firstNameController.text,
-          lastName: lastNameController.text,
-          password: passwordController.text,
-          passwordConfirmation: passwordController.text,
-          status: widget.userType.name);
-      var res = await UserProvider().registerUser(userData);
-      Navigator.of(context).pop();
-      if (res) {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => Home()),
-        );
-      } else {
-        showSnakbar(context);
-      }
-    }
-  }
+  //
+  // void onTapCreateaccount(BuildContext context) async {
+  //   if (_formKey.currentState!.validate()) {
+  //     showIosDialoge(context);
+  //     _formKey.currentState!.save();
+  //     UserRegistration userData = UserRegistration(
+  //         email: emailController.text,
+  //         firstName: firstNameController.text,
+  //         lastName: lastNameController.text,
+  //         password: passwordController.text,
+  //         passwordConfirmation: passwordController.text,
+  //         status: widget.userType.name);
+  //     var res = await UserProvider().registerUser(userData);
+  //     Navigator.of(context).pop();
+  //     if (res) {
+  //       Navigator.push(
+  //         context,
+  //         MaterialPageRoute(builder: (context) => Player_Bio()),
+  //       );
+  //     } else {
+  //       showSnakbar(context);
+  //     }
+  //   }
+  // }
 
   void onTapTxtWithlogin() {
     Navigator.push(context, MaterialPageRoute(builder: (context) => Login()));
   }
+}
+
+class ApiUrl {
+  static String host = 'https://plagremoverpro.com/sports-areas/public';
+  static String registerUser = '$host/api/user/register';
+  static String loginUser = '$host/api/user/login';
+  static String forgotPassword = '$host/api/user/forgot';
+  static String verifyResetPass = '$host/api/user/verfiy-reset-password';
+  static String resetPassword = '$host/api/user/resetpassword';
+  static String logoutUser = '$host/api/user/logout';
+}
+
+enum UserType {
+  player,
+  coach,
+  club,
 }

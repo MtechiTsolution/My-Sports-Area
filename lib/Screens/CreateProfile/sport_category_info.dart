@@ -165,7 +165,7 @@ import '../../theme/custom_text_style.dart';
 import '../../theme/theme_helper.dart';
 import '../../widgets/custom_elevated_button.dart';
 import '../../widgets/custom_image_view.dart';
-import 'Sequerty_question.dart';
+import 'Secuerty_question.dart';
 
 // Define a custom controller class
 class MyController {

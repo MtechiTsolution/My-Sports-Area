@@ -14,6 +14,7 @@ class AppColors {
   static const Color LabelColor = Color(0XFF000000);
   static const Color customColor = Color(0xFFEF18A2);
 
+
   // New color for icon in light mode
   static const Color iconColorLight = Colors.black; // Adjust the color as needed
 
@@ -27,10 +28,10 @@ class AppColors {
 class CustomTextheading {
   static TextStyle headlineMedium(bool isDarkMode) {
     return TextStyle(
-      color: isDarkMode ? AppColors.darkCustomColor : AppColors.customColor,
+      color: isDarkMode ? AppColors.darkCustomColor : AppColors.black,
       fontFamily: 'Jost',
       fontWeight: FontWeight.w700,
-      fontSize: 28.0,
+      fontSize: 24.0,
     );
   }
 }
@@ -39,8 +40,8 @@ class labelText {
   static TextStyle Lebl_Text(bool isDarkMode) {
     return TextStyle(
       color: isDarkMode ? AppColors.darkLabelColor : AppColors.LabelColor,
-      fontWeight: FontWeight.w600,
-      fontSize: 18,
+      fontWeight: FontWeight.w500,
+      fontSize: 16,
       fontFamily: 'Poppins',
     );
   }
@@ -112,6 +113,7 @@ class ClickText {
 //     );
 //   }
 // }
+
 class AppTheme {
   static ThemeData getTheme(bool isDarkMode) {
     return isDarkMode ? darkTheme : lightTheme;
@@ -120,26 +122,38 @@ class AppTheme {
   static final ThemeData lightTheme = ThemeData(
     brightness: Brightness.light,
     primaryColor: AppColors.pink, // Set the background color for light mode
-    // You can use AppColors for other theme properties as needed
     textTheme: TextTheme(
       titleLarge: CustomTextheading.headlineMedium(false),
-      // Add other text styles using AppColors
+      titleMedium: TextStyle(
+        // Set the cursor color for light mode
+        color: AppColors.pink,
+      ),
     ),
     iconTheme: IconThemeData(
       color: AppColors.iconColorLight, // Set the icon color for light mode
-    ), colorScheme: ColorScheme.fromSwatch().copyWith(secondary: AppColors.red).copyWith(background: AppColors.white),
+    ),
+    colorScheme: ColorScheme.fromSwatch().copyWith(
+      secondary: AppColors.red,
+      background: AppColors.white,
+    ),
   );
 
   static final ThemeData darkTheme = ThemeData(
     brightness: Brightness.dark,
     primaryColor: AppColors.darkBackground, // Set the background color for dark mode
-    // You can use dark variants of colors in dark theme
     textTheme: TextTheme(
       titleLarge: CustomTextheading.headlineMedium(true),
-      // Add other text styles using dark variants of AppColors
+      titleMedium: TextStyle(
+        // Set the cursor color for dark mode
+        color: AppColors.pink,
+      ),
     ),
     iconTheme: IconThemeData(
       color: AppColors.iconColorDark, // Set the icon color for dark mode
-    ), colorScheme: ColorScheme.dark().copyWith(secondary: AppColors.pink).copyWith(background: AppColors.darkBackground),
+    ),
+    colorScheme: ColorScheme.dark().copyWith(
+      secondary: AppColors.pink,
+      background: AppColors.darkBackground,
+    ),
   );
 }

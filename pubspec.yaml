@@ -54,6 +54,7 @@ dependencies:
   image_picker: ^1.0.5
   provider: ^6.1.1
   http: ^0.13.6
+  easy_stepper: ^0.8.3
 
 
 dev_dependencies:

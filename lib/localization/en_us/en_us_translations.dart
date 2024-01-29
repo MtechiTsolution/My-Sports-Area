@@ -36,6 +36,15 @@ final Map<String, String> enUs = {
   "msg_alright_have_an2": "                Alright have an acount?",
   "lbl_welcome_to": "Welcome\nto",
 
+
+
+  // player Bio
+  "lbl_player_bio": "Bio ",
+
+  //slection game
+  "lbl_game_selection": "Game Selection ",
+
+
   // Acount Create page 1  Screen
   "msg_birthday_optional": "Birthday (optional)",
   "lbl_with_login": "With login",

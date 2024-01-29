@@ -1,126 +1,143 @@
+//
+// import 'package:easy_stepper/easy_stepper.dart';
 // import 'package:flutter/material.dart';
-// import 'package:my_sports_app/Screens/CreateAccount/widgets/skill.dart';
-// import 'package:my_sports_app/Screens/CreateAccount/widgets/Achievements.dart';
-// import 'package:my_sports_app/Utils/them.dart';
-// import 'package:my_sports_app/localization/en_us/en_us_translations.dart';
 //
-// import '../../../Utils/size_utils.dart';
-// import '../../../theme/app_decoration.dart';
-// import '../../../theme/theme_helper.dart';
-//
-// class InformationPerformance extends StatefulWidget {
-//   const InformationPerformance({Key? key});
+// class Tab_changer_acc extends StatefulWidget {
+//   const Tab_changer_acc({Key? key}) : super(key: key);
 //
 //   @override
-//   _InformationPerformanceState createState() => _InformationPerformanceState();
+//   _Tab_changer_accState createState() => _Tab_changer_accState();
 // }
 //
-// class _InformationPerformanceState extends State<InformationPerformance> {
+// class _Tab_changer_accState extends State<Tab_changer_acc>
+//     with SingleTickerProviderStateMixin {
+//   int activeStep = 0;
+//   final dashImages = [
+//     'assets/1.png',
+//     'assets/2.png',
+//     'assets/3.png',
+//     'assets/4.png',
+//     'assets/5.png',
+//   ];
+//
 //   @override
 //   Widget build(BuildContext context) {
 //     bool isDarkMode = Theme.of(context).brightness == Brightness.dark;
+//
 //     return SafeArea(
 //       child: Scaffold(
-//         backgroundColor: Theme.of(context).colorScheme.background, // Updated line
-//         body: DefaultTabController(
-//           initialIndex: 0,
-//           length: 2, // Number of tabs
-//           child: SizedBox(
-//             width: MediaQuery.of(context).size.width,
-//             child: Container(
-//
-//               decoration: AppDecoration.outlineBlack.copyWith(
-//                 color: isDarkMode ? Colors.grey[800] : Colors.white,
-//                 borderRadius: BorderRadiusStyle.roundedBorder8,
-//               ),
-//               child: SingleChildScrollView(
-//                 child: Column(
-//                   mainAxisSize: MainAxisSize.min,
-//                   mainAxisAlignment: MainAxisAlignment.center,
-//                   children: [
-//                     Padding(
-//                       padding: getPadding(
-//                         top: 23,
+//         body: SafeArea(
+//           child: SingleChildScrollView(
+//             child: Column(
+//               children: [
+//                 EasyStepper(
+//                   activeStep: activeStep,
+//                   lineStyle: const LineStyle(
+//                     lineLength: 50,
+//                     lineType: LineType.normal,
+//                     lineThickness: 3,
+//                     lineSpace: 1,
+//                     lineWidth: 10,
+//                     unreachedLineType: LineType.dashed,
+//                   ),
+//                   stepShape: StepShape.rRectangle,
+//                   stepBorderRadius: 15,
+//                   borderThickness: 2,
+//                   internalPadding: 10,
+//                   padding: const EdgeInsetsDirectional.symmetric(
+//                     horizontal: 30,
+//                     vertical: 20,
+//                   ),
+//                   stepRadius: 28,
+//                   finishedStepBorderColor: Colors.deepOrange,
+//                   finishedStepTextColor: Colors.deepOrange,
+//                   finishedStepBackgroundColor: Colors.deepOrange,
+//                   activeStepIconColor: Colors.deepOrange,
+//                   showLoadingAnimation: false,
+//                   steps: [
+//                     EasyStep(
+//                       customStep: ClipRRect(
+//                         borderRadius: BorderRadius.circular(15),
+//                         child: Opacity(
+//                           opacity: activeStep >= 0 ? 1 : 0.3,
+//                           child: Image.asset('assets/1.png'),
+//                         ),
 //                       ),
-//                       child: Text(
-//                         enUs["lbl_information"]!,
-//                         style: theme.textTheme.headlineMedium,
-//                       ),
-//                     ),
-//                     Center(
-//                       child: Container(
-//                         width: MediaQuery.of(context).size.width *0.9,
-//
-//                         margin: getMargin(
-//                           top: 61,
-//
-//                         ),
-//                         decoration: BoxDecoration(
-//
-//                           color: Colors.grey[200],
-//                           borderRadius: BorderRadius.circular(
-//                             getHorizontalSize(10),
-//                           ),
-//                         ),
-//                         child:
-//                         TabBar(
-//
-//                           isScrollable: false,
-//                           labelColor: AppColors.pink,
-//                           labelStyle: TextStyle(
-//                             fontSize: getFontSize(20),
-//                             fontFamily: 'Inter',
-//                             fontWeight: FontWeight.w600,
-//                           ),
-//                           unselectedLabelColor: AppColors.black,
-//                          // unselectedLabelStyle: labelText.Lebl_Text(isDarkMode),
-//                           indicator: BoxDecoration(
-//                             color: Colors.transparent,
-//                             // borderRadius: BorderRadius.circular(
-//                             //   getHorizontalSize(20),
-//                             // ),
-//                           ),
-//
-//
-//                           tabs: [
-//                             Tab(
-//                               child: Container(
-//                                 width: MediaQuery.of(context).size.width * 0.5,
-//                                 child: Text(
-//                                   enUs["lbl_skill"]!,
-//                                   textAlign: TextAlign.center,
-//                                   //style: labelText.Lebl_Text(isDarkMode),
-//                                 ),
-//                               ),
-//                             ),
-//                             Tab(
-//                               child: Container(
-//
-//                                 padding: EdgeInsets.symmetric(horizontal: 10),
-//                                 width: MediaQuery.of(context).size.width * 0.5,
-//                                 child: Text(
-//                                   enUs["lbl_work"]!,
-//                                   textAlign: TextAlign.center,
-//                                 ),
-//                               ),
-//                             ),
-//                           ],
-//                         ),
+//                       customTitle: const Text(
+//                         'Dash 1',
+//                         textAlign: TextAlign.center,
 //                       ),
 //                     ),
-//                     SizedBox(
-//                       height: MediaQuery.of(context).size.height ,
-//                       width: MediaQuery.of(context).size.width ,
-//                       child: TabBarView(
-//                         children: [
-//                           Skill(),
-//                           TabWork(),
-//                         ],
+//                     EasyStep(
+//                       customStep: ClipRRect(
+//                         borderRadius: BorderRadius.circular(15),
+//                         child: Opacity(
+//                           opacity: activeStep >= 1 ? 1 : 0.3,
+//                           child: Image.asset('assets/2.png'),
+//                         ),
+//                       ),
+//                       customTitle: const Text(
+//                         'Dash 2',
+//                         textAlign: TextAlign.center,
+//                       ),
+//                     ),
+//                     EasyStep(
+//                       customStep: ClipRRect(
+//                         borderRadius: BorderRadius.circular(15),
+//                         child: Opacity(
+//                           opacity: activeStep >= 2 ? 1 : 0.3,
+//                           child: Image.asset('assets/3.png'),
+//                         ),
+//                       ),
+//                       customTitle: const Text(
+//                         'Dash 3',
+//                         textAlign: TextAlign.center,
+//                       ),
+//                     ),
+//                     EasyStep(
+//                       customStep: ClipRRect(
+//                         borderRadius: BorderRadius.circular(15),
+//                         child: Opacity(
+//                           opacity: activeStep >= 3 ? 1 : 0.3,
+//                           child: Image.asset('assets/images/logo.png'),
+//                         ),
+//                       ),
+//                       customTitle: const Text(
+//                         'Dash 4',
+//                         textAlign: TextAlign.center,
+//                       ),
+//                     ),
+//                     EasyStep(
+//                       customStep: ClipRRect(
+//                         borderRadius: BorderRadius.circular(15),
+//                         child: Opacity(
+//                           opacity: activeStep >= 4 ? 1 : 0.3,
+//                           child: Image.asset('assets/5.png'),
+//                         ),
+//                       ),
+//                       customTitle: const Text(
+//                         'Dash 5',
+//                         textAlign: TextAlign.center,
 //                       ),
 //                     ),
 //                   ],
+//                   onStepReached: (index) => setState(() => activeStep = index),
 //                 ),
-//               ),
+//                 SizedBox(
+//                   height: 200,
+//                   width: double.infinity,
+//                   child: Column(
+//                     children: [
+//                       Image.asset(
+//                         dashImages[activeStep],
+//                         height: 150,
+//                       ),
+//                       const SizedBox(height: 5),
+//                       Text('Dash ${activeStep + 1}')
+//                     ],
+//                   ),
+//                 ),
+//               ],
 //             ),
 //           ),
 //         ),
@@ -129,19 +146,25 @@
 //   }
 // }
 //
-//
-//
 
+
+
+import 'package:easy_stepper/easy_stepper.dart';
 import 'package:flutter/material.dart';
 import 'package:my_sports_app/Screens/CreateProfile/widgets/skill.dart';
-import 'package:my_sports_app/Screens/CreateProfile/widgets/Achievements.dart';
 import 'package:my_sports_app/Utils/them.dart';
-import 'package:my_sports_app/localization/en_us/en_us_translations.dart';
 
-import '../../../Utils/size_utils.dart';
-import '../../../theme/app_decoration.dart';
-import '../../../theme/theme_helper.dart';
-import '../../CreateProfile/My_interests.dart';
+class CustomStepWidget {
+  final Widget content;
+  final String title;
+  final IconData fixedIcon;
+
+  CustomStepWidget({
+    required this.content,
+    required this.title,
+    required this.fixedIcon,
+  });
+}
 
 class Tab_changer_acc extends StatefulWidget {
   const Tab_changer_acc({Key? key}) : super(key: key);
@@ -152,13 +175,26 @@ class Tab_changer_acc extends StatefulWidget {
 
 class _Tab_changer_accState extends State<Tab_changer_acc>
     with SingleTickerProviderStateMixin {
-  late TabController _tabController;
+  int activeStep = 0;
 
-  @override
-  void initState() {
-    super.initState();
-    _tabController = TabController(length: 2, vsync: this);
-  }
+  final List<CustomStepWidget> customSteps = [
+    CustomStepWidget(
+      title: 'Skill ',
+      content: YourCustomWidget1(),
+      fixedIcon: Icons.star,
+    ),
+    CustomStepWidget(
+      title: 'Injuries',
+      content: YourCustomWidget2(),
+      fixedIcon: Icons.access_time,
+    ),
+    CustomStepWidget(
+      title: 'Achievement',
+      content: YourCustomWidget3(),
+      fixedIcon: Icons.person,
+    ),
+
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -166,140 +202,164 @@ class _Tab_changer_accState extends State<Tab_changer_acc>
 
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Theme.of(context).colorScheme.background,
-        body: DefaultTabController(
-          initialIndex: 0,
-          length: 4, // Number of tabs
-          child: SizedBox.expand(
-            child: Container(
-              decoration: AppDecoration.outlineBlack.copyWith(
-                color: isDarkMode ? Colors.grey[800] : Colors.white,
-                borderRadius: BorderRadiusStyle.roundedBorder8,
-              ),
-              child: Column(
-                mainAxisSize: MainAxisSize.max,
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding: getPadding(
-                      top: 20,
-                    ),
-                    child: Text(
-                      enUs["lbl_information"]!,
-                      style: theme.textTheme.headlineMedium,
+        appBar: AppBar(
+          title: Text(
+            customSteps[activeStep].title,
+            maxLines: 2,
+            overflow: TextOverflow.ellipsis,
+            textAlign: TextAlign.center,
+            style: CustomTextheading.headlineMedium(isDarkMode),
+          ),
+          centerTitle: true,
+          backgroundColor: isDarkMode ? AppColors.darkBackground : AppColors.pink,
+          iconTheme: IconThemeData(
+            color: isDarkMode ? AppColors.iconColorDark : Colors.white, // Set back arrow color based on mode
+          ),
+        ),
+        body: SafeArea(
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                Container(
+                  color: isDarkMode ? AppColors.darkBackground : AppColors.pink,
+                  child: SizedBox(
+                    height: 90,
+                    child: EasyStepper(
+                      activeStep: activeStep,
+                      lineStyle: const LineStyle(
+                        lineLength: 50,
+                        lineType: LineType.normal,
+                        lineThickness: 2,
+                        activeLineColor: AppColors.black,
+                        finishedLineColor: AppColors.white,
+                        unreachedLineColor: AppColors.black,
+                        lineSpace: 1,
+                        lineWidth: 5,
+                        unreachedLineType: LineType.dashed,
+                      ),
+                      stepShape: StepShape.rRectangle,
+                      stepBorderRadius: 15,
+                      borderThickness: 1,
+                      internalPadding: 5,
+                      padding: const EdgeInsetsDirectional.symmetric(
+                        horizontal: 20,
+                        vertical: 10,
+                      ),
+                      stepRadius: 28,
+                      finishedStepBorderColor: AppColors.white,
+                      finishedStepTextColor: AppColors.pink,
+                      finishedStepBackgroundColor: AppColors.white,
+                      activeStepIconColor: AppColors.pink,
+                      showLoadingAnimation: false,
+                      steps: customSteps
+                          .map((step) => EasyStep(
+                        customStep: YourCustomStepWidget(
+                          fixedIcon: step.fixedIcon,
+                        ),
+                        // customTitle: Row(
+                        //   children: [
+                        //     Icon(step.fixedIcon),
+                        //     SizedBox(width: 8),
+                        //     Text(
+                        //       step.title,
+                        //       textAlign: TextAlign.center,
+                        //     ),
+                        //   ],
+                        // ),
+
+
+                      ))
+                          .toList(),
+                      onStepReached: (index) => setState(() => activeStep = index),
                     ),
                   ),
-                  Container(
-                    width: MediaQuery.of(context).size.width * 0.9,
-                    margin: getMargin(
-                      top: 21,
-                    ),
-                    decoration: BoxDecoration(
-                      color: Colors.grey[200],
-                      borderRadius: BorderRadius.circular(
-                        getHorizontalSize(10),
-                      ),
-                    ),
-                    child: TabBar(
-                      controller: _tabController,
-                      isScrollable: false,
-                      labelColor: AppColors.pink,
-                      labelStyle: TextStyle(
-                        fontSize: getFontSize(20),
-                        fontFamily: 'Inter',
-                        fontWeight: FontWeight.w600,
-                      ),
-                      unselectedLabelColor: AppColors.black,
-                      indicator: BoxDecoration(
-                        color: Colors.transparent,
-                      ),
-                      tabs: [
-                        Tab(
-                          child: Container(
-                            width: MediaQuery.of(context).size.width * 0.5,
-                            child: Text(
-                              enUs["lbl_skill"]!,
-                              textAlign: TextAlign.center,
-                            ),
-                          ),
-                        ),
-                        Tab(
-                          child: Container(
-                            padding: EdgeInsets.symmetric(horizontal: 10),
-                            width: MediaQuery.of(context).size.width * 0.5,
-                            child: Text(
-                              enUs["lbl_work"]!,
-                              textAlign: TextAlign.center,
-                            ),
-                          ),
-                        ),
-                        Tab(
-                          // New tab for Achievements
-                          child: Container(
-                            width: MediaQuery.of(context).size.width * 0.25,
-                            child: Text(
-                              enUs["lbl_achievements"]!,
-                              textAlign: TextAlign.center,
-                            ),
-                          ),
-                        ),
-                        Tab(
-                          // New tab for Injuries
-                          child: Container(
-                            width: MediaQuery.of(context).size.width * 0.25,
-                            child: Text(
-                              enUs["lbl_injuries"]!,
-                              textAlign: TextAlign.center,
-                            ),
-                          ),
-                        ),
+
+                ),
+
+                Container(
+                  child: SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.9,
+                    width: double.infinity,
+                    child: Column(
+                      children: [
+                        // Text(customSteps[activeStep].title, style: CustomTextheading.headlineMedium(isDarkMode),),
+                        // const SizedBox(height: 0),
+                        customSteps[activeStep].content,
+
+
                       ],
                     ),
                   ),
-                  Expanded(
-                    child: SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.7,
-                      width: MediaQuery.of(context).size.width,
-                      child: TabBarView(
-                        controller: _tabController,
-                        children: [
-                          Skill(),
-                          Achievements(),
-                          Container(child: Text("Achievements Content")),
-                          Container(child: Text("Injuries Content")),
-                        ],
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(16.0),
-                    child: ElevatedButton(
-                      onPressed: () {
-                        if (_tabController.index < _tabController.length - 1) {
-                          // Move to the next tab
-                          _tabController.animateTo(_tabController.index + 1);
-                        } else {
-                          // Navigate to the next screen (Interest.dart)
-                          Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: (context) => My_Interests(),
-                            ),
-                          );
-                        }
-                      },
-                      child: Text('Next'),
-                      style: ElevatedButton.styleFrom(
-                        foregroundColor: Colors.white,
-                        backgroundColor: AppColors.pink,
-                        minimumSize: Size(double.infinity, 50),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+                ),
+              ],
             ),
           ),
         ),
+      ),
+    );
+  }
+}
+
+class YourCustomWidget1 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      child: Container(
+        color: Colors.blue,
+        child: Skill(),
+      ),
+    );
+  }
+}
+
+class YourCustomWidget2 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: Colors.green,
+    );
+  }
+}
+
+class YourCustomWidget3 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: Colors.black,
+    );
+  }
+}
+
+class YourCustomWidget4 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: Colors.yellow,
+    );
+  }
+}
+
+class YourCustomWidget5 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: Colors.orange,
+    );
+  }
+}
+
+class YourCustomStepWidget extends StatelessWidget {
+  final IconData fixedIcon;
+
+  const YourCustomStepWidget({required this.fixedIcon});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Icon(
+        fixedIcon,
+        size: 32,
+        color: AppColors.black,
       ),
     );
   }

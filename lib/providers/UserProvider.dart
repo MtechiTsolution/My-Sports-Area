@@ -4,7 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:my_sports_app/Utils/pref_utils.dart';
 import 'package:my_sports_app/generated/assets.dart';
-import 'package:my_sports_app/models/User.dart'; // Import HTTP package
+import 'package:my_sports_app/models/User.dart';
+
+import '../Screens/Authentication/player_auth/CreateAccount.dart'; // Import HTTP package
 
 class UserProvider with ChangeNotifier {
   Future<bool> registerUser(UserRegistration userData) async {

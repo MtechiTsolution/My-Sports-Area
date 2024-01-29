@@ -9,7 +9,7 @@ import '../theme/custom_text_style.dart';
 import '../theme/theme_helper.dart';
 import '../widgets/custom_elevated_button.dart';
 import 'Authentication/player_auth/CreateAccount.dart';
-import 'CreateProfile/Sequerty_question.dart';
+import 'CreateProfile/Secuerty_question.dart';
 
 class CategorySelectionScreen extends StatefulWidget {
   const CategorySelectionScreen({Key? key}) : super(key: key);
