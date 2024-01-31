@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:my_sports_app/Screens/Authentication/widget/customtextfiled.dart';
 import 'package:my_sports_app/Screens/CreateProfile/widgets/sabwidgets/_addskill.dart';
 import 'package:my_sports_app/Utils/them.dart';
 
 import '../../../Utils/size_utils.dart';
+import '../../../theme/app_decoration.dart';
+import '../../Authentication/player_auth/tabchanger_create_ac.dart';
 
 class Skill extends StatefulWidget {
   const Skill({super.key});
@@ -30,10 +33,20 @@ class _SkillState extends State<Skill> {
   TextEditingController skillNameController = TextEditingController();
   TextEditingController skillLevelController = TextEditingController();
   TextEditingController skillDescriptionController = TextEditingController();
-
+  bool maleChecked = false;
+  bool femaleChecked = false;
+  String? imagePath;
+  // String? selectedGame;
+  TextEditingController jerseyNumberController = TextEditingController();
+ // List<String> games = ['Football', 'Hand ball', 'Basket ball', 'Rug bay'];
+  String? selectedGameError;
+  DateTime? selectedDate = DateTime.now();
   @override
   Widget build(BuildContext context) {
     bool isDarkMode = Theme.of(context).brightness == Brightness.dark;
+
+    double screenWidth = MediaQuery.of(context).size.width;
+    double screenHeight = MediaQuery.of(context).size.height;
     return SafeArea(
         child: Scaffold(
             resizeToAvoidBottomInset: false,
@@ -47,6 +60,31 @@ class _SkillState extends State<Skill> {
                   bottom: MediaQuery.of(context).size.height * 0.2),
               child:
                   Column(mainAxisAlignment: MainAxisAlignment.start, children: [
+                    Align(
+                      alignment: Alignment.center,
+                      child: Padding(
+                        padding: getPadding(left: 0, top: 5, right: 0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Padding(
+                              padding: getPadding(left: 0, top: 10, bottom: 5),
+                              child: Text(
+                                "Joining Date",
+                                style: labelText.Lebl_Text(isDarkMode),
+                              ),
+                            ),
+                            Text(
+                              selectedDate != null
+                                  ? DateFormat('yyyy-MM-dd').format(selectedDate!)
+                                  : 'No date selected',
+                              style: TextStyle(fontSize: 16, color: Colors.black),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
                 Padding(
                   padding: getPadding(left: 15, top: 5, right: 18),
                   child: Column(
@@ -301,199 +339,123 @@ class _SkillState extends State<Skill> {
                     ],
                   ),
                 ),
-
-                //Skill name
-
-                // Display Added Skills
-                for (int i = 0; i < skills.length; i++)
-                  Card(
-                    elevation: 4,
-                    margin: EdgeInsets.symmetric(vertical: 8, horizontal: 16),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(
-                          5), // Adjust the radius as needed
-                    ),
-                    child: Column(
+                    Column(
+                      mainAxisSize: MainAxisSize.min,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        Text("Skill section",
-                            style: labelText.Lebl_Text(isDarkMode)),
-                        Container(
-                          width: double.infinity,
-                          child: Stack(
+
+
+                        Padding(
+                          padding: getPadding(left: 15, top: 5, right: 18),
+                          child: Text(
+                            "Jersey Number",
+                            style: labelText.Lebl_Text(isDarkMode),
+                          ),
+                        ),
+                        Padding(
+                          padding: getPadding(left: 15, top: 5, right: 18),
+                          child: CustomTextField(
+                            hintText: "Enter Jersey Number",
+                            isDarkMode: isDarkMode,
+                            controller: jerseyNumberController,
+                            keyboardType: TextInputType.number,
+                            onChanged: (value) {},
+                            validator: (value) {
+                              if (value == null || value.isEmpty) {
+                                return "Please enter valid text";
+                              }
+                              return null;
+                            },
+                          ),
+                        ),
+                        Padding(
+                          padding: getPadding(left: 15, top: 5, right: 18),
+
+                          child: Text(
+                            "Measurements",
+                            style: labelText.Lebl_Text(isDarkMode),
+                          ),
+                        ),
+                        Padding(
+                          padding: getPadding(left: 15, top: 5, right: 18),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Padding(
-                                padding: getPadding(all: 20),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      "Skill: ${skills[i].name}",
-                                      style: TextStyle(
-                                        fontSize: 18,
-                                        fontWeight: FontWeight.bold,
-                                      ),
+                              Expanded(
+                                child: TextFormField(
+                                  autofocus: false,
+                                  decoration: InputDecoration(
+                                    contentPadding: EdgeInsets.all(screenWidth * 0.03),
+                                    hintText: "height",
+                                    hintStyle: TextStyle(fontSize: 16, color: Colors.grey),
+                                    border: OutlineInputBorder(
+                                      borderRadius: BorderRadius.all(Radius.circular(8)),
+                                      borderSide: BorderSide(color: AppColors.pink),
                                     ),
-                                    SizedBox(height: 8),
-                                    // Add some spacing between the skill name and level
-                                    Text("Level: ${skills[i].level ?? 'N/A'}"),
-                                    SizedBox(height: 8),
-                                    Text(
-                                        "Description: ${skills[i].skilldesc ?? 'N/A'}"),
-                                  ],
+                                    enabledBorder: OutlineInputBorder(
+                                      borderRadius: BorderRadius.all(Radius.circular(8)),
+                                      borderSide: BorderSide(color: AppColors.pink),
+                                    ),
+                                    focusedBorder: OutlineInputBorder(
+                                      borderRadius: BorderRadius.all(Radius.circular(8)),
+                                      borderSide: BorderSide(color: AppColors.pink),
+                                    ),
+                                  ),
+                                  keyboardType: TextInputType.number,
+                                  onChanged: (value) {},
+                                  validator: (value) {
+                                    if (value == null || value.isEmpty) {
+                                      return "Please enter valid text";
+                                    }
+                                    return null;
+                                  },
                                 ),
                               ),
-                              Positioned(
-                                top: 0,
-                                right: 0,
-                                child: IconButton(
-                                  icon: Icon(Icons.delete_forever),
-                                  // Use the close icon or any other delete icon you prefer
-                                  onPressed: () {
-                                    setState(() {
-                                      skills.removeAt(i);
-                                    });
+                              SizedBox(width: screenWidth * 0.02),
+                              Expanded(
+                                child: TextFormField(
+                                  autofocus: false,
+                                  decoration: InputDecoration(
+                                    contentPadding: EdgeInsets.all(screenWidth * 0.03),
+                                    hintText: "Weight",
+                                    hintStyle: TextStyle(fontSize: 16, color: Colors.grey),
+                                    border: OutlineInputBorder(
+                                      borderRadius: BorderRadius.all(Radius.circular(8)),
+                                      borderSide: BorderSide(color: AppColors.pink),
+                                    ),
+                                    enabledBorder: OutlineInputBorder(
+                                      borderRadius: BorderRadius.all(Radius.circular(8)),
+                                      borderSide: BorderSide(color: AppColors.pink),
+                                    ),
+                                    focusedBorder: OutlineInputBorder(
+                                      borderRadius: BorderRadius.all(Radius.circular(8)),
+                                      borderSide: BorderSide(color: AppColors.pink),
+                                    ),
+                                  ),
+                                  keyboardType: TextInputType.number,
+                                  onChanged: (value) {},
+                                  validator: (value) {
+                                    if (value == null || value.isEmpty) {
+                                      return "Please enter valid text";
+                                    }
+                                    return null;
                                   },
                                 ),
                               ),
                             ],
                           ),
                         ),
+
                       ],
                     ),
-                  ),
-
                 //Skill name
-                Padding(
-                  padding: getPadding(left: 15, top: 5, right: 18),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      // Skill Name
-                      Padding(
-                        padding: getPadding(left: 7, top: 10, bottom: 5),
-                        child: Text(
-                          "Skill Name",
-                          style: labelText.Lebl_Text(isDarkMode),
-                        ),
-                      ),
-                      TextFormField(
-                        controller: skillNameController,
-                        decoration: InputDecoration(
-                          contentPadding: EdgeInsets.all(15),
-                          hintText: "Enter the skill name",
-                          hintStyle:
-                              TextStyle(fontSize: 16, color: Colors.grey),
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.all(Radius.circular(8)),
-                          ),
-                        ),
-                        keyboardType: TextInputType.text,
-                      ),
 
-                      // Skill Level
-                      Padding(
-                        padding: getPadding(left: 7, top: 10, bottom: 5),
-                        child: Text(
-                          "Skill Level",
-                          style: labelText.Lebl_Text(isDarkMode),
-                        ),
-                      ),
-                      DropdownButtonFormField<String>(
-                        value: null,
-                        // Set the initial value to null
-                        onChanged: (value) {},
-                        items:
-                            level.map<DropdownMenuItem<String>>((String game) {
-                          return DropdownMenuItem<String>(
-                            value: game,
-                            child: Text(game),
-                          );
-                        }).toList(),
-                        decoration: InputDecoration(
-                          contentPadding: EdgeInsets.all(15),
-                          hintText: "Select skill Level",
-                          hintStyle:
-                              TextStyle(fontSize: 16, color: Colors.grey),
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.all(Radius.circular(8)),
-                          ),
-                        ),
-                      ),
-
-                      //skill description
-                      Padding(
-                        padding: getPadding(left: 7, top: 10, bottom: 5),
-                        child: Text(
-                          "Description",
-                          style: labelText.Lebl_Text(isDarkMode),
-                        ),
-                      ),
-                      Container(
-                        height: MediaQuery.of(context).size.height * 0.1,
-                        decoration: BoxDecoration(
-                          border: Border.all(color: AppColors.greenlight),
-                          borderRadius: BorderRadius.circular(5),
-                          color: AppColors.greenlight,
-                        ),
-                        child: TextFormField(
-                          controller: skillDescriptionController,
-                          decoration: InputDecoration(
-                            contentPadding: EdgeInsets.all(5),
-                            hintText: "Enter the skill description",
-                            hintStyle: HintText.hint_Text(isDarkMode),
-                            labelStyle: TextStyle(color: Colors.blue),
-                            // Change label text color (if any)
-                            // If you want to change the text color while typing, you can use the style property
-                            border: InputBorder.none,
-                          ),
-                          keyboardType: TextInputType.multiline,
-                          // Allow multiple lines
-                          maxLines: null,
-                          // Set maxLines to null for unlimited lines or a specific number
-                          textInputAction: TextInputAction.newline,
-                          style: InputText.Input_Text(
-                              isDarkMode), // Change text color
-                          // Allow the user to create new lines
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-
-                // Add Skill Button
-                Padding(
-                  padding: getPadding(left: 15, top: 5, right: 18),
-                  child: ElevatedButton(
-                    onPressed: () {
-                      // Validate and add skill
-                      if (skillNameController.text.isNotEmpty &
-                          skillDescriptionController.text.isNotEmpty) {
-                        setState(() {
-                          skills.add(SkillData(
-                              name: skillNameController.text,
-                              level: null,
-                              // Set the initial level to null
-                              skilldesc: skillDescriptionController.text));
-                          // Reset controllers
-                          skillNameController.clear();
-                          skillLevelController.clear();
-                        });
-                      }
-                    },
-                    child: Text("Add Skill"),
-                  ),
-                ),
               ]),
             )))));
   }
 
-  //
-  // _SkillState(this.level);
-  //
-  //
-  //
+
 
   void onTapNext() {}
 }

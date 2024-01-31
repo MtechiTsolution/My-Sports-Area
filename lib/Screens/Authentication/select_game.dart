@@ -57,7 +57,8 @@ class Game_selectionState extends State<Game_selection> {
           color: isDarkMode ? AppColors.darkBackground : AppColors.white,
           width: double.maxFinite,
           padding: getPadding(left: 17, right: 17),
-          child: Container(
+          child:
+          Container(
             margin: EdgeInsets.only(
               top: MediaQuery.of(context).size.height * 0.1,
               bottom: MediaQuery.of(context).size.height * 0.1,

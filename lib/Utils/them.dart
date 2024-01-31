@@ -28,6 +28,17 @@ class AppColors {
 class CustomTextheading {
   static TextStyle headlineMedium(bool isDarkMode) {
     return TextStyle(
+      color: isDarkMode ? AppColors.darkCustomColor : AppColors.white,
+      fontFamily: 'Jost',
+      fontWeight: FontWeight.w700,
+      fontSize: 24.0,
+    );
+  }
+}
+
+class appheading {
+  static TextStyle appheadings(bool isDarkMode) {
+    return TextStyle(
       color: isDarkMode ? AppColors.darkCustomColor : AppColors.black,
       fontFamily: 'Jost',
       fontWeight: FontWeight.w700,

@@ -79,7 +79,7 @@ class _CreateAccountState extends State<CreateAccount> {
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
                       textAlign: TextAlign.center,
-                      style: CustomTextheading.headlineMedium(isDarkMode),
+                      style: appheading.appheadings(isDarkMode),
                     ),
                   ),
                 ),

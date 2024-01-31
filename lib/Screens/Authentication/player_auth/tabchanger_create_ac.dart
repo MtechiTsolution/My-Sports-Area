@@ -179,18 +179,23 @@ class _Tab_changer_accState extends State<Tab_changer_acc>
 
   final List<CustomStepWidget> customSteps = [
     CustomStepWidget(
+      title: 'Player ',
+      content: Playerinfo(),
+      fixedIcon: Icons.star,
+    ),
+    CustomStepWidget(
       title: 'Skill ',
-      content: YourCustomWidget1(),
+      content: Skill(),
       fixedIcon: Icons.star,
     ),
     CustomStepWidget(
       title: 'Injuries',
-      content: YourCustomWidget2(),
+      content: Achievement(),
       fixedIcon: Icons.access_time,
     ),
     CustomStepWidget(
       title: 'Achievement',
-      content: YourCustomWidget3(),
+      content: Injuries(),
       fixedIcon: Icons.person,
     ),
 
@@ -227,14 +232,15 @@ class _Tab_changer_accState extends State<Tab_changer_acc>
                     child: EasyStepper(
                       activeStep: activeStep,
                       lineStyle: const LineStyle(
-                        lineLength: 50,
+                        lineLength: 40,
                         lineType: LineType.normal,
                         lineThickness: 2,
-                        activeLineColor: AppColors.black,
+                        activeLineColor: AppColors.white,
                         finishedLineColor: AppColors.white,
                         unreachedLineColor: AppColors.black,
                         lineSpace: 1,
-                        lineWidth: 5,
+                        lineWidth: 4,
+
                         unreachedLineType: LineType.dashed,
                       ),
                       stepShape: StepShape.rRectangle,
@@ -242,15 +248,15 @@ class _Tab_changer_accState extends State<Tab_changer_acc>
                       borderThickness: 1,
                       internalPadding: 5,
                       padding: const EdgeInsetsDirectional.symmetric(
-                        horizontal: 20,
+                        horizontal: 10,
                         vertical: 10,
                       ),
-                      stepRadius: 28,
+                      stepRadius: 24,
                       finishedStepBorderColor: AppColors.white,
                       finishedStepTextColor: AppColors.pink,
                       finishedStepBackgroundColor: AppColors.white,
-                      activeStepIconColor: AppColors.pink,
-                      showLoadingAnimation: false,
+                      activeStepIconColor: AppColors.white,
+                      showLoadingAnimation: true,
                       steps: customSteps
                           .map((step) => EasyStep(
                         customStep: YourCustomStepWidget(
@@ -300,7 +306,7 @@ class _Tab_changer_accState extends State<Tab_changer_acc>
   }
 }
 
-class YourCustomWidget1 extends StatelessWidget {
+class Playerinfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Expanded(
@@ -312,7 +318,7 @@ class YourCustomWidget1 extends StatelessWidget {
   }
 }
 
-class YourCustomWidget2 extends StatelessWidget {
+class   Skill_info extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -321,7 +327,7 @@ class YourCustomWidget2 extends StatelessWidget {
   }
 }
 
-class YourCustomWidget3 extends StatelessWidget {
+class Achievement extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -330,7 +336,7 @@ class YourCustomWidget3 extends StatelessWidget {
   }
 }
 
-class YourCustomWidget4 extends StatelessWidget {
+class Injuries extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -339,14 +345,6 @@ class YourCustomWidget4 extends StatelessWidget {
   }
 }
 
-class YourCustomWidget5 extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      color: Colors.orange,
-    );
-  }
-}
 
 class YourCustomStepWidget extends StatelessWidget {
   final IconData fixedIcon;
@@ -359,7 +357,7 @@ class YourCustomStepWidget extends StatelessWidget {
       child: Icon(
         fixedIcon,
         size: 32,
-        color: AppColors.black,
+        color: AppColors.darkLabelColor,
       ),
     );
   }
