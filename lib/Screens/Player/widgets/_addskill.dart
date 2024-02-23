@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
-import '../../../../Utils/size_utils.dart';
-import '../skill.dart';
+import '../../../Utils/size_utils.dart';
+
 
 import 'package:my_sports_app/Utils/them.dart';
+
+import '../createprofile/stepper/player_info.dart';
 
 class SkillAdd extends StatefulWidget {
   final List<SkillData> skills;

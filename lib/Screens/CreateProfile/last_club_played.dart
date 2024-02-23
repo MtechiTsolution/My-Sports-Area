@@ -280,7 +280,7 @@ import '../../theme/theme_helper.dart';
 import '../../widgets/custom_elevated_button.dart';
 import '../../widgets/custom_image_view.dart';
 import '../../widgets/custom_text_form_field.dart';
-import '../Authentication/player_auth/tabchanger_create_ac.dart';
+import '../Player/createprofile/stepper/stepper_create_ac.dart';
 
 class LastClubPlayed extends StatefulWidget {
   const LastClubPlayed({Key? key});
@@ -569,6 +569,6 @@ class _LastClubPlayedState extends State<LastClubPlayed> {
   void onTapNext() {
     // Navigate to the next screen or perform the desired action here.
     Navigator.push(
-        context, MaterialPageRoute(builder: (context) => Tab_changer_acc()));
+        context, MaterialPageRoute(builder: (context) => stepper_acc()));
   }
 }

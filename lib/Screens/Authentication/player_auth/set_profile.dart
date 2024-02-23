@@ -2,7 +2,7 @@ import 'dart:io';
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:my_sports_app/Screens/Authentication/player_auth/tabchanger_create_ac.dart';
+import 'package:my_sports_app/Screens/Player/createprofile/stepper/stepper_create_ac.dart';
 import '../../../Utils/size_utils.dart';
 import '../../../Utils/them.dart';
 import '../../../localization/en_us/en_us_translations.dart';
@@ -362,7 +362,7 @@ class _Player_set_profileState extends State<Player_set_profile> {
                     width: screenWidth * 0.5, // Adjust the width as needed
                     child: ElevatedButton(
                       onPressed: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context) => Tab_changer_acc()));
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => stepper_acc()));
                         // Add the logic for the "Next" button
                       },
                       style: ElevatedButton.styleFrom(
