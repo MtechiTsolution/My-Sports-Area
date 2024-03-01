@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:my_sports_app/Utils/them.dart';
+import 'package:my_sports_app/models/Position.dart';
+import 'package:my_sports_app/models/Sport.dart';
 
 class CustomDropDown extends StatelessWidget {
   //final Widget icon;
@@ -52,6 +55,70 @@ class CustomDropDown extends StatelessWidget {
           ),
         ],
       ),
+    );
+  }
+}
+
+class CustomDropDownField extends StatelessWidget {
+  //final Widget icon;
+  final selectvalue;
+  final String? hintText;
+  final TextStyle? hintStyle;
+  final List items;
+  final ValueChanged? onChanged;
+
+  CustomDropDownField({
+    //required this.icon,
+    this.selectvalue,
+    required this.hintText,
+    this.hintStyle,
+    required this.items,
+    required this.onChanged,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return DropdownButtonFormField(
+      value: selectvalue,
+      onChanged: onChanged,
+      items: items.map<DropdownMenuItem>((game) {
+        return DropdownMenuItem(
+          value: game,
+          child: Text(game.runtimeType == Sport
+              ? game.sportName
+              : game.runtimeType == Position
+                  ? game.name
+                  : game),
+        );
+      }).toList(),
+      decoration: InputDecoration(
+        contentPadding: const EdgeInsets.all(15),
+        hintText: hintText,
+        hintStyle: const TextStyle(fontSize: 16, color: Colors.grey),
+        border: const OutlineInputBorder(
+          borderRadius: BorderRadius.all(Radius.circular(8)),
+          borderSide: BorderSide(color: AppColors.pink),
+        ),
+        enabledBorder: const OutlineInputBorder(
+          borderRadius: BorderRadius.all(Radius.circular(8)),
+          borderSide: BorderSide(color: AppColors.pink),
+        ),
+        focusedBorder: const OutlineInputBorder(
+          borderRadius: BorderRadius.all(Radius.circular(8)),
+          borderSide: BorderSide(color: AppColors.pink),
+        ),
+      ),
+      validator: (value) {
+        if (value == null || false) {
+          return "Please select";
+        } else if (value.runtimeType == String && value.isEmpty) {
+          return "Please select";
+        }
+
+        // You can add additional validation if needed
+
+        return null;
+      },
     );
   }
 }

@@ -26,11 +26,12 @@ class CustomTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     Color fillColor = isDarkMode ? AppColors.darkBackground : AppColors.white;
 
-    return TextField(
+    return TextFormField(
       controller: controller,
       decoration: InputDecoration(
         labelStyle: labelText.Lebl_Text(isDarkMode),
-        contentPadding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.02),
+        contentPadding:
+            EdgeInsets.all(MediaQuery.of(context).size.width * 0.02),
         hintText: hintText,
         hintStyle: TextStyle(fontSize: 16, color: Colors.grey),
         border: OutlineInputBorder(
@@ -53,6 +54,7 @@ class CustomTextField extends StatelessWidget {
       keyboardType: keyboardType,
       minLines: minLines,
       onChanged: onChanged,
+      validator: validator,
     );
   }
 }

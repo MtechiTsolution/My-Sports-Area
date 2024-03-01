@@ -6,13 +6,15 @@ import 'package:my_sports_app/Screens/Authentication/player_auth/tabchanger_crea
 
 import 'package:my_sports_app/Screens/Authentication/select_game.dart';
 import 'package:my_sports_app/Screens/Authentication/widget/customtextfiled.dart';
+import 'package:my_sports_app/Utils/pref_utils.dart';
+import 'package:my_sports_app/models/User.dart';
+import 'package:my_sports_app/providers/UserProvider.dart';
+import 'package:my_sports_app/widgets/ios_dialogue.dart';
 
 import '../../../Utils/them.dart';
 import '../../../localization/en_us/en_us_translations.dart';
 
 import '../../../theme/theme_helper.dart';
-
-
 
 class Player_Bio extends StatefulWidget {
   const Player_Bio({Key? key}) : super(key: key);
@@ -29,6 +31,13 @@ class _Player_BioState extends State<Player_Bio> {
   TextEditingController bioController = TextEditingController();
   TextEditingController phoneNumberController = TextEditingController();
   TextEditingController addressController = TextEditingController();
+
+  @override
+  void initState() {
+    // TODO: implement initState
+
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -50,17 +59,20 @@ class _Player_BioState extends State<Player_Bio> {
             style: CustomTextheading.headlineMedium(isDarkMode),
           ),
           centerTitle: true,
-          backgroundColor: isDarkMode ? AppColors.darkBackground : AppColors.pink,
+          backgroundColor:
+              isDarkMode ? AppColors.darkBackground : AppColors.pink,
           iconTheme: IconThemeData(
             color: isDarkMode ? AppColors.iconColorDark : Colors.white,
           ),
         ),
-        body: SingleChildScrollView(
-          child: Padding(
-            padding:  EdgeInsets.only( bottom: MediaQuery.of(context).viewInsets.bottom + 20,),
-            child: Container(
-              height: MediaQuery.of(context).size.height,
-              padding: EdgeInsets.symmetric(horizontal: screenWidth * 0.05),
+        body: Padding(
+          padding: EdgeInsets.only(
+            bottom: MediaQuery.of(context).viewInsets.bottom + 20,
+          ),
+          child: Container(
+            height: MediaQuery.of(context).size.height,
+            padding: EdgeInsets.symmetric(horizontal: screenWidth * 0.05),
+            child: SingleChildScrollView(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -98,8 +110,10 @@ class _Player_BioState extends State<Player_Bio> {
                                   child: Container(
                                     alignment: Alignment.center,
                                     child: Column(
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      crossAxisAlignment: CrossAxisAlignment.center,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
                                       children: [
                                         Icon(Icons.camera_alt),
                                         SizedBox(height: screenHeight * 0.005),
@@ -151,8 +165,10 @@ class _Player_BioState extends State<Player_Bio> {
                           return Theme(
                             data: ThemeData.light().copyWith(
                               primaryColor: AppColors.pink,
-                              colorScheme: ColorScheme.light(primary: AppColors.pink),
-                              buttonTheme: ButtonThemeData(textTheme: ButtonTextTheme.primary),
+                              colorScheme:
+                                  ColorScheme.light(primary: AppColors.pink),
+                              buttonTheme: ButtonThemeData(
+                                  textTheme: ButtonTextTheme.primary),
                             ),
                             child: child!,
                           );
@@ -220,14 +236,16 @@ class _Player_BioState extends State<Player_Bio> {
                               color: AppColors.pink,
                               width: 2,
                             ),
-                            color: maleChecked ? AppColors.pink : Colors.transparent,
+                            color: maleChecked
+                                ? AppColors.pink
+                                : Colors.transparent,
                           ),
                           child: maleChecked
                               ? Icon(
-                            Icons.check,
-                            size: screenWidth * 0.04,
-                            color: AppColors.white,
-                          )
+                                  Icons.check,
+                                  size: screenWidth * 0.04,
+                                  color: AppColors.white,
+                                )
                               : null,
                         ),
                       ),
@@ -252,14 +270,16 @@ class _Player_BioState extends State<Player_Bio> {
                               color: AppColors.pink,
                               width: 2,
                             ),
-                            color: femaleChecked ? AppColors.pink : Colors.transparent,
+                            color: femaleChecked
+                                ? AppColors.pink
+                                : Colors.transparent,
                           ),
                           child: femaleChecked
                               ? Icon(
-                            Icons.check,
-                            size: screenWidth * 0.04,
-                            color: AppColors.white,
-                          )
+                                  Icons.check,
+                                  size: screenWidth * 0.04,
+                                  color: AppColors.white,
+                                )
                               : null,
                         ),
                       ),
@@ -268,7 +288,6 @@ class _Player_BioState extends State<Player_Bio> {
                     ],
                   ),
                   SizedBox(height: screenHeight * 0.02),
-
                   Align(
                     alignment: Alignment.bottomLeft,
                     child: Text(
@@ -322,8 +341,69 @@ class _Player_BioState extends State<Player_Bio> {
                   Container(
                     width: screenWidth * 0.5,
                     child: ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context) => Tab_changer_acc()));
+                      onPressed: () async {
+                        if (imagePath == null) {
+                          showSnakbar(context, text: "please select image");
+                          print("plese select image");
+                          return;
+                        }
+                        if (selectedDate == null) {
+                          showSnakbar(context,
+                              text: "please select date of birth");
+                          print("please select date of birth");
+                          return;
+                        }
+                        if (!maleChecked && !femaleChecked) {
+                          showSnakbar(context, text: "please select gender");
+                          print("plese select gender");
+                          return;
+                        }
+
+                        if (addressController.text.isEmpty) {
+                          showSnakbar(context, text: "please enter address");
+                          print("please enter address");
+                          return;
+                        }
+                        User? user = PrefUtils().getUser();
+                        if (user != null) {
+                          print(user.toJson().toString());
+                          user = User(
+                              id: user.id,
+                              firstName: user.firstName,
+                              lastName: user.lastName,
+                              email: user.email,
+                              status: user.status,
+                              rememberToken: user.rememberToken,
+                              createdAt: user.createdAt,
+                              updatedAt: user.updatedAt,
+                              bio: bioController.text,
+                              phoneNumber: phoneNumberController.text,
+                              address: addressController.text,
+                              dateOfBirth: selectedDate.toString(),
+                              gender: maleChecked
+                                  ? "male"
+                                  : femaleChecked
+                                      ? "female"
+                                      : "other");
+
+                          if (PrefUtils().checklogin()) {
+                            showIosDialoge(context);
+                            var res = await UserProvider().updateUserwithImage(
+                                user, File(imagePath!), PrefUtils.token);
+                            Navigator.of(context).pop();
+                            if (res) {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Tab_changer_acc()));
+                            }
+                          }
+                        }
+
+                        // Navigator.push(
+                        //     context,
+                        //     MaterialPageRoute(
+                        //         builder: (context) => Tab_changer_acc()));
                       },
                       style: ElevatedButton.styleFrom(
                         foregroundColor: Colors.white,
@@ -345,7 +425,8 @@ class _Player_BioState extends State<Player_Bio> {
   }
 
   Future<void> _pickImageFromGallery() async {
-    final pickedFile = await ImagePicker().pickImage(source: ImageSource.gallery);
+    final pickedFile =
+        await ImagePicker().pickImage(source: ImageSource.gallery);
 
     if (pickedFile != null) {
       setState(() {

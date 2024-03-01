@@ -2,35 +2,64 @@
 class Assets {
   Assets._();
 
-  static const String appBarAppbarButton = 'lib/widgets/app_bar/appbar_button.dart';
-  static const String appBarAppbarCircleimage = 'lib/widgets/app_bar/appbar_circleimage.dart';
-  static const String appBarAppbarCircleimage1 = 'lib/widgets/app_bar/appbar_circleimage_1.dart';
-  static const String appBarAppbarImage = 'lib/widgets/app_bar/appbar_image.dart';
-  static const String appBarAppbarImage1 = 'lib/widgets/app_bar/appbar_image_1.dart';
-  static const String appBarAppbarImage2 = 'lib/widgets/app_bar/appbar_image_2.dart';
-  static const String appBarAppbarImage3 = 'lib/widgets/app_bar/appbar_image_3.dart';
-  static const String appBarAppbarSubtitle = 'lib/widgets/app_bar/appbar_subtitle.dart';
-  static const String appBarAppbarSubtitle1 = 'lib/widgets/app_bar/appbar_subtitle_1.dart';
-  static const String appBarAppbarSubtitle2 = 'lib/widgets/app_bar/appbar_subtitle_2.dart';
-  static const String appBarAppbarSubtitle3 = 'lib/widgets/app_bar/appbar_subtitle_3.dart';
-  static const String appBarAppbarSubtitle4 = 'lib/widgets/app_bar/appbar_subtitle_4.dart';
-  static const String appBarAppbarSubtitle5 = 'lib/widgets/app_bar/appbar_subtitle_5.dart';
-  static const String appBarAppbarSubtitle6 = 'lib/widgets/app_bar/appbar_subtitle_6.dart';
-  static const String appBarAppbarSubtitle7 = 'lib/widgets/app_bar/appbar_subtitle_7.dart';
-  static const String appBarAppbarSubtitle8 = 'lib/widgets/app_bar/appbar_subtitle_8.dart';
-  static const String appBarAppbarSubtitle9 = 'lib/widgets/app_bar/appbar_subtitle_9.dart';
-  static const String appBarAppbarTitle = 'lib/widgets/app_bar/appbar_title.dart';
-  static const String appBarCustomAppBar = 'lib/widgets/app_bar/custom_app_bar.dart';
-  static const String authenticationBioPlayer = 'lib/Screens/Authentication/bio_player.dart';
-  static const String authenticationSelectGame = 'lib/Screens/Authentication/select_game.dart';
-  static const String createProfileLastClubPlayed = 'lib/Screens/CreateProfile/last_club_played.dart';
-  static const String createProfileMyInterests = 'lib/Screens/CreateProfile/My_interests.dart';
-  static const String createProfileSecuertyQuestion = 'lib/Screens/CreateProfile/Secuerty_question.dart';
-  static const String createProfileSportCategoryInfo = 'lib/Screens/CreateProfile/sport_category_info.dart';
-  static const String enUsEnUsTranslations = 'lib/localization/en_us/en_us_translations.dart';
-  static const String entertainmentEntertainment = 'lib/Screens/Entertainment/entertainment.dart';
-  static const String entertainmentEntertainmentResult = 'lib/Screens/Entertainment/entertainment_result.dart';
-  static const String entertainmentPalyCard = 'lib/Screens/Entertainment/paly_card.dart';
+  static const String appBarAppbarButton =
+      'lib/widgets/app_bar/appbar_button.dart';
+  static const String appBarAppbarCircleimage =
+      'lib/widgets/app_bar/appbar_circleimage.dart';
+  static const String appBarAppbarCircleimage1 =
+      'lib/widgets/app_bar/appbar_circleimage_1.dart';
+  static const String appBarAppbarImage =
+      'lib/widgets/app_bar/appbar_image.dart';
+  static const String appBarAppbarImage1 =
+      'lib/widgets/app_bar/appbar_image_1.dart';
+  static const String appBarAppbarImage2 =
+      'lib/widgets/app_bar/appbar_image_2.dart';
+  static const String appBarAppbarImage3 =
+      'lib/widgets/app_bar/appbar_image_3.dart';
+  static const String appBarAppbarSubtitle =
+      'lib/widgets/app_bar/appbar_subtitle.dart';
+  static const String appBarAppbarSubtitle1 =
+      'lib/widgets/app_bar/appbar_subtitle_1.dart';
+  static const String appBarAppbarSubtitle2 =
+      'lib/widgets/app_bar/appbar_subtitle_2.dart';
+  static const String appBarAppbarSubtitle3 =
+      'lib/widgets/app_bar/appbar_subtitle_3.dart';
+  static const String appBarAppbarSubtitle4 =
+      'lib/widgets/app_bar/appbar_subtitle_4.dart';
+  static const String appBarAppbarSubtitle5 =
+      'lib/widgets/app_bar/appbar_subtitle_5.dart';
+  static const String appBarAppbarSubtitle6 =
+      'lib/widgets/app_bar/appbar_subtitle_6.dart';
+  static const String appBarAppbarSubtitle7 =
+      'lib/widgets/app_bar/appbar_subtitle_7.dart';
+  static const String appBarAppbarSubtitle8 =
+      'lib/widgets/app_bar/appbar_subtitle_8.dart';
+  static const String appBarAppbarSubtitle9 =
+      'lib/widgets/app_bar/appbar_subtitle_9.dart';
+  static const String appBarAppbarTitle =
+      'lib/widgets/app_bar/appbar_title.dart';
+  static const String appBarCustomAppBar =
+      'lib/widgets/app_bar/custom_app_bar.dart';
+  static const String authenticationBioPlayer =
+      'lib/Screens/Authentication/bio_player.dart';
+  static const String authenticationSelectGame =
+      'lib/Screens/Authentication/select_game.dart';
+  static const String createProfileLastClubPlayed =
+      'lib/Screens/CreateProfile/last_club_played.dart';
+  static const String createProfileMyInterests =
+      'lib/Screens/CreateProfile/My_interests.dart';
+  static const String createProfileSecuertyQuestion =
+      'lib/Screens/CreateProfile/Secuerty_question.dart';
+  static const String createProfileSportCategoryInfo =
+      'lib/Screens/CreateProfile/sport_category_info.dart';
+  static const String enUsEnUsTranslations =
+      'lib/localization/en_us/en_us_translations.dart';
+  static const String entertainmentEntertainment =
+      'lib/Screens/Entertainment/entertainment.dart';
+  static const String entertainmentEntertainmentResult =
+      'lib/Screens/Entertainment/entertainment_result.dart';
+  static const String entertainmentPalyCard =
+      'lib/Screens/Entertainment/paly_card.dart';
   static const String fontsCaveatRomanBold = 'assets/fonts/CaveatRomanBold.ttf';
   static const String fontsInterBlack = 'assets/fonts/InterBlack.ttf';
   static const String fontsInterBold = 'assets/fonts/InterBold.ttf';
@@ -40,50 +69,68 @@ class Assets {
   static const String fontsInterSemiBold = 'assets/fonts/InterSemiBold.ttf';
   static const String fontsJostRomanBold = 'assets/fonts/JostRomanBold.ttf';
   static const String fontsJostRomanMedium = 'assets/fonts/JostRomanMedium.ttf';
-  static const String fontsJostRomanRegular = 'assets/fonts/JostRomanRegular.ttf';
+  static const String fontsJostRomanRegular =
+      'assets/fonts/JostRomanRegular.ttf';
   static const String fontsKrubBold = 'assets/fonts/KrubBold.ttf';
-  static const String fontsPollerOneRegular = 'assets/fonts/PollerOneRegular.ttf';
+  static const String fontsPollerOneRegular =
+      'assets/fonts/PollerOneRegular.ttf';
   static const String fontsPoppinsBold = 'assets/fonts/PoppinsBold.ttf';
   static const String fontsPoppinsLight = 'assets/fonts/PoppinsLight.ttf';
   static const String fontsPoppinsMedium = 'assets/fonts/PoppinsMedium.ttf';
   static const String fontsPoppinsRegular = 'assets/fonts/PoppinsRegular.ttf';
   static const String fontsPoppinsSemiBold = 'assets/fonts/PoppinsSemiBold.ttf';
-  static const String forgetPasswordForgetPassMail = 'lib/Screens/Authentication/player_auth/Forget_password/forget_pass_mail.dart';
-  static const String forgetPasswordOTPScreen = 'lib/Screens/Authentication/player_auth/Forget_password/OTP_Screen.dart';
-  static const String forgetPasswordSetNewPassword = 'lib/Screens/Authentication/player_auth/Forget_password/set_new_password.dart';
+  static const String forgetPasswordForgetPassMail =
+      'lib/Screens/Authentication/player_auth/Forget_password/forget_pass_mail.dart';
+  static const String forgetPasswordOTPScreen =
+      'lib/Screens/Authentication/player_auth/Forget_password/OTP_Screen.dart';
+  static const String forgetPasswordSetNewPassword =
+      'lib/Screens/Authentication/player_auth/Forget_password/set_new_password.dart';
   static const String generatedAssets = 'lib/generated/assets.dart';
-  static const String homeScreenHomeScreen = 'lib/Screens/HomeScreen/HomeScreen.dart';
+  static const String homeScreenHomeScreen =
+      'lib/Screens/HomeScreen/HomeScreen.dart';
   static const String imagesHockryground = 'assets/images/hockryground.jpeg';
   static const String imagesImageNotFound = 'assets/images/image_not_found.png';
-  static const String imagesImg2b091d39c676d6e = 'assets/images/img_2b091d39c676d6e.png';
+  static const String imagesImg2b091d39c676d6e =
+      'assets/images/img_2b091d39c676d6e.png';
   static const String imagesImgAccept11 = 'assets/images/img_accept11.png';
   static const String imagesImgAddphoto1 = 'assets/images/img_addphoto1.png';
   static const String imagesImgAge1 = 'assets/images/img_age1.png';
   static const String imagesImgApp1 = 'assets/images/img_app1.png';
-  static const String imagesImgArrowsmallleft = 'assets/images/img_arrowsmallleft.png';
-  static const String imagesImgArrowsmallright = 'assets/images/img_arrowsmallright.png';
-  static const String imagesImgArrowsmallright38x38 = 'assets/images/img_arrowsmallright_38x38.png';
+  static const String imagesImgArrowsmallleft =
+      'assets/images/img_arrowsmallleft.png';
+  static const String imagesImgArrowsmallright =
+      'assets/images/img_arrowsmallright.png';
+  static const String imagesImgArrowsmallright38x38 =
+      'assets/images/img_arrowsmallright_38x38.png';
   static const String imagesImgBell21 = 'assets/images/img_bell21.png';
   static const String imagesImgBell3 = 'assets/images/img_bell3.png';
   static const String imagesImgBookmark = 'assets/images/img_bookmark.svg';
   static const String imagesImgBookmark1 = 'assets/images/img_bookmark1.png';
-  static const String imagesImgCalendar11 = 'assets/images/img_calendar_1_1.png';
-  static const String imagesImgCalendarsilhouette1 = 'assets/images/img_calendarsilhouette_1.png';
+  static const String imagesImgCalendar11 =
+      'assets/images/img_calendar_1_1.png';
+  static const String imagesImgCalendarsilhouette1 =
+      'assets/images/img_calendarsilhouette_1.png';
   static const String imagesImgCamera = 'assets/images/img_camera.png';
-  static const String imagesImgCategories3 = 'assets/images/img_categories3.png';
+  static const String imagesImgCategories3 =
+      'assets/images/img_categories3.png';
   static const String imagesImgCheckmark = 'assets/images/img_checkmark.svg';
-  static const String imagesImgCheckmark21 = 'assets/images/img_checkmark21.png';
+  static const String imagesImgCheckmark21 =
+      'assets/images/img_checkmark21.png';
   static const String imagesImgCity1 = 'assets/images/img_city1.png';
   static const String imagesImgClock = 'assets/images/img_clock.png';
   static const String imagesImgClose = 'assets/images/img_close.svg';
   static const String imagesImgClose110 = 'assets/images/img_close110.png';
-  static const String imagesImgCommentdots1 = 'assets/images/img_commentdots1.png';
-  static const String imagesImgComponent14 = 'assets/images/img_component14.svg';
+  static const String imagesImgCommentdots1 =
+      'assets/images/img_commentdots1.png';
+  static const String imagesImgComponent14 =
+      'assets/images/img_component14.svg';
   static const String imagesImgContrast = 'assets/images/img_contrast.svg';
   static const String imagesImgCross1 = 'assets/images/img_cross1.png';
-  static const String imagesImgCrosssmall2 = 'assets/images/img_crosssmall2.png';
+  static const String imagesImgCrosssmall2 =
+      'assets/images/img_crosssmall2.png';
   static const String imagesImgCut = 'assets/images/img_cut.svg';
-  static const String imagesImgDataprocessing = 'assets/images/img_dataprocessing.png';
+  static const String imagesImgDataprocessing =
+      'assets/images/img_dataprocessing.png';
   static const String imagesImgDelete1 = 'assets/images/img_delete1.png';
   static const String imagesImgDiagram1 = 'assets/images/img_diagram1.png';
   static const String imagesImgEllipse126 = 'assets/images/img_ellipse126.png';
@@ -94,20 +141,25 @@ class Assets {
   static const String imagesImgEllipse16 = 'assets/images/img_ellipse16.png';
   static const String imagesImgEllipse17 = 'assets/images/img_ellipse17.png';
   static const String imagesImgEllipse21 = 'assets/images/img_ellipse21.png';
-  static const String imagesImgEllipse2128x28 = 'assets/images/img_ellipse21_28x28.png';
+  static const String imagesImgEllipse2128x28 =
+      'assets/images/img_ellipse21_28x28.png';
   static const String imagesImgEllipse22 = 'assets/images/img_ellipse22.png';
   static const String imagesImgEllipse23 = 'assets/images/img_ellipse23.png';
   static const String imagesImgEllipse24 = 'assets/images/img_ellipse24.png';
-  static const String imagesImgEllipse2428x28 = 'assets/images/img_ellipse24_28x28.png';
+  static const String imagesImgEllipse2428x28 =
+      'assets/images/img_ellipse24_28x28.png';
   static const String imagesImgEllipse25 = 'assets/images/img_ellipse25.png';
   static const String imagesImgEllipse28 = 'assets/images/img_ellipse28.png';
-  static const String imagesImgEllipse2871x71 = 'assets/images/img_ellipse28_71x71.png';
+  static const String imagesImgEllipse2871x71 =
+      'assets/images/img_ellipse28_71x71.png';
   static const String imagesImgEllipse29 = 'assets/images/img_ellipse29.png';
-  static const String imagesImgEllipse2971x71 = 'assets/images/img_ellipse29_71x71.png';
+  static const String imagesImgEllipse2971x71 =
+      'assets/images/img_ellipse29_71x71.png';
   static const String imagesImgEllipse30 = 'assets/images/img_ellipse30.png';
   static const String imagesImgEllipse4 = 'assets/images/img_ellipse4.png';
   static const String imagesImgEllipse41 = 'assets/images/img_ellipse4_1.png';
-  static const String imagesImgEllipse464x64 = 'assets/images/img_ellipse4_64x64.png';
+  static const String imagesImgEllipse464x64 =
+      'assets/images/img_ellipse4_64x64.png';
   static const String imagesImgEllipse50 = 'assets/images/img_ellipse50.png';
   static const String imagesImgEllipse51 = 'assets/images/img_ellipse51.png';
   static const String imagesImgEllipse52 = 'assets/images/img_ellipse52.png';
@@ -115,12 +167,14 @@ class Assets {
   static const String imagesImgEllipse67 = 'assets/images/img_ellipse67.png';
   static const String imagesImgEllipse671 = 'assets/images/img_ellipse67_1.png';
   static const String imagesImgEllipse672 = 'assets/images/img_ellipse67_2.png';
-  static const String imagesImgEllipse6761x61 = 'assets/images/img_ellipse67_61x61.png';
+  static const String imagesImgEllipse6761x61 =
+      'assets/images/img_ellipse67_61x61.png';
   static const String imagesImgEllipse78 = 'assets/images/img_ellipse78.png';
   static const String imagesImgEllipse81 = 'assets/images/img_ellipse81.png';
   static const String imagesImgEnvelope3 = 'assets/images/img_envelope3.png';
   static const String imagesImgEyeIcon = 'assets/images/img_eye_icon.svg';
-  static const String imagesImgEyePasswordLogo = 'assets/images/img_eye_password_logo.png';
+  static const String imagesImgEyePasswordLogo =
+      'assets/images/img_eye_password_logo.png';
   static const String imagesImgFacebook1 = 'assets/images/img_facebook1.png';
   static const String imagesImgFile = 'assets/images/img_file.svg';
   static const String imagesImgFile13 = 'assets/images/img_file13.png';
@@ -136,17 +190,25 @@ class Assets {
   static const String imagesImgGroup104 = 'assets/images/img_group104.svg';
   static const String imagesImgGroup113 = 'assets/images/img_group113.png';
   static const String imagesImgGroup116 = 'assets/images/img_group116.png';
-  static const String imagesImgGroup237737 = 'assets/images/img_group237737.svg';
-  static const String imagesImgGroup237816 = 'assets/images/img_group237816.svg';
-  static const String imagesImgGroup237817 = 'assets/images/img_group237817.png';
-  static const String imagesImgGroup237947 = 'assets/images/img_group237947.png';
+  static const String imagesImgGroup237737 =
+      'assets/images/img_group237737.svg';
+  static const String imagesImgGroup237816 =
+      'assets/images/img_group237816.svg';
+  static const String imagesImgGroup237817 =
+      'assets/images/img_group237817.png';
+  static const String imagesImgGroup237947 =
+      'assets/images/img_group237947.png';
   static const String imagesImgGroup44 = 'assets/images/img_group44.png';
   static const String imagesImgGroup994 = 'assets/images/img_group994.png';
   static const String imagesImgGroup997 = 'assets/images/img_group997.png';
-  static const String imagesImgGroupOnerror = 'assets/images/img_group_onerror.svg';
-  static const String imagesImgGroupOnerror102x87 = 'assets/images/img_group_onerror_102x87.svg';
-  static const String imagesImgGroupPrimarycontainer = 'assets/images/img_group_primarycontainer.svg';
-  static const String imagesImgGroupPrimarycontainer9x36 = 'assets/images/img_group_primarycontainer_9x36.svg';
+  static const String imagesImgGroupOnerror =
+      'assets/images/img_group_onerror.svg';
+  static const String imagesImgGroupOnerror102x87 =
+      'assets/images/img_group_onerror_102x87.svg';
+  static const String imagesImgGroupPrimarycontainer =
+      'assets/images/img_group_primarycontainer.svg';
+  static const String imagesImgGroupPrimarycontainer9x36 =
+      'assets/images/img_group_primarycontainer_9x36.svg';
   static const String imagesImgHandshake4 = 'assets/images/img_handshake4.png';
   static const String imagesImgHistory1 = 'assets/images/img_history1.png';
   static const String imagesImgHome1 = 'assets/images/img_home1.png';
@@ -157,113 +219,189 @@ class Assets {
   static const String imagesImgLayout1 = 'assets/images/img_layout1.png';
   static const String imagesImgLightbulb = 'assets/images/img_lightbulb.svg';
   static const String imagesImgLocation = 'assets/images/img_location.svg';
-  static const String imagesImgLocationBlack90001 = 'assets/images/img_location_black_900_01.svg';
-  static const String imagesImgLocationpin1 = 'assets/images/img_locationpin1.png';
+  static const String imagesImgLocationBlack90001 =
+      'assets/images/img_location_black_900_01.svg';
+  static const String imagesImgLocationpin1 =
+      'assets/images/img_locationpin1.png';
   static const String imagesImgMail = 'assets/images/img_mail.svg';
-  static const String imagesImgMediumvolume1 = 'assets/images/img_mediumvolume1.png';
+  static const String imagesImgMediumvolume1 =
+      'assets/images/img_mediumvolume1.png';
   static const String imagesImgMicrophone = 'assets/images/img_microphone.png';
   static const String imagesImgNext1 = 'assets/images/img_next1.png';
-  static const String imagesImgNotification = 'assets/images/img_notification.svg';
+  static const String imagesImgNotification =
+      'assets/images/img_notification.svg';
   static const String imagesImgOffer = 'assets/images/img_offer.svg';
-  static const String imagesImgPaperplane1 = 'assets/images/img_paperplane_1.png';
-  static const String imagesImgPaperplanetop1 = 'assets/images/img_paperplanetop_1.png';
+  static const String imagesImgPaperplane1 =
+      'assets/images/img_paperplane_1.png';
+  static const String imagesImgPaperplanetop1 =
+      'assets/images/img_paperplanetop_1.png';
   static const String imagesImgPen1 = 'assets/images/img_pen1.png';
   static const String imagesImgPencil11 = 'assets/images/img_pencil11.png';
   static const String imagesImgPhoneflip = 'assets/images/img_phoneflip.png';
-  static const String imagesImgPhotocamera1 = 'assets/images/img_photocamera1.png';
+  static const String imagesImgPhotocamera1 =
+      'assets/images/img_photocamera1.png';
   static const String imagesImgPicture2 = 'assets/images/img_picture2.png';
   static const String imagesImgPin1 = 'assets/images/img_pin1.png';
   static const String imagesImgPlay = 'assets/images/img_play.svg';
-  static const String imagesImgPlaybutton1 = 'assets/images/img_playbutton1.png';
+  static const String imagesImgPlaybutton1 =
+      'assets/images/img_playbutton1.png';
   static const String imagesImgPlus = 'assets/images/img_plus.svg';
-  static const String imagesImgPlusBlack900 = 'assets/images/img_plus_black_900.svg';
+  static const String imagesImgPlusBlack900 =
+      'assets/images/img_plus_black_900.svg';
   static const String imagesImgPrivacy1 = 'assets/images/img_privacy1.png';
   static const String imagesImgPuzzlealt3 = 'assets/images/img_puzzlealt3.png';
   static const String imagesImgRanking1 = 'assets/images/img_ranking1.png';
   static const String imagesImgRectangle = 'assets/images/img_rectangle.png';
   static const String imagesImgRectangle1 = 'assets/images/img_rectangle1.png';
   static const String imagesImgRectangle2 = 'assets/images/img_rectangle2.png';
-  static const String imagesImgRectangle28 = 'assets/images/img_rectangle28.png';
-  static const String imagesImgRectangle28117x116 = 'assets/images/img_rectangle28_117x116.png';
+  static const String imagesImgRectangle28 =
+      'assets/images/img_rectangle28.png';
+  static const String imagesImgRectangle28117x116 =
+      'assets/images/img_rectangle28_117x116.png';
   static const String imagesImgRectangle4 = 'assets/images/img_rectangle4.png';
-  static const String imagesImgRectangle4310x393 = 'assets/images/img_rectangle4_310x393.png';
-  static const String imagesImgRectangle4316x393 = 'assets/images/img_rectangle4_316x393.png';
-  static const String imagesImgRectangle52 = 'assets/images/img_rectangle52.png';
-  static const String imagesImgRectangle53 = 'assets/images/img_rectangle53.png';
-  static const String imagesImgRectangle54 = 'assets/images/img_rectangle54.png';
-  static const String imagesImgRectangle55 = 'assets/images/img_rectangle55.png';
-  static const String imagesImgRectangle56 = 'assets/images/img_rectangle56.png';
-  static const String imagesImgRectangle56139x161 = 'assets/images/img_rectangle56_139x161.png';
-  static const String imagesImgRectangle57 = 'assets/images/img_rectangle57.png';
-  static const String imagesImgRectangle58 = 'assets/images/img_rectangle58.png';
-  static const String imagesImgRectangle59 = 'assets/images/img_rectangle59.png';
-  static const String imagesImgRectangle60 = 'assets/images/img_rectangle60.png';
-  static const String imagesImgRectangle61 = 'assets/images/img_rectangle61.png';
-  static const String imagesImgRectangle61295x340 = 'assets/images/img_rectangle61_295x340.png';
-  static const String imagesImgRectangle62 = 'assets/images/img_rectangle62.png';
-  static const String imagesImgRectangle6549 = 'assets/images/img_rectangle6549.png';
-  static const String imagesImgRectangle6550 = 'assets/images/img_rectangle6550.png';
-  static const String imagesImgRectangle6555 = 'assets/images/img_rectangle6555.png';
-  static const String imagesImgRectangle6555262x390 = 'assets/images/img_rectangle6555_262x390.png';
-  static const String imagesImgRectangle6555262x391 = 'assets/images/img_rectangle6555_262x391.png';
-  static const String imagesImgRectangle6555262x392 = 'assets/images/img_rectangle6555_262x392.png';
-  static const String imagesImgRectangle6556 = 'assets/images/img_rectangle6556.png';
-  static const String imagesImgRectangle6556280x390 = 'assets/images/img_rectangle6556_280x390.png';
-  static const String imagesImgRectangle6556280x391 = 'assets/images/img_rectangle6556_280x391.png';
-  static const String imagesImgRectangle6556280x392 = 'assets/images/img_rectangle6556_280x392.png';
-  static const String imagesImgRectangle6557 = 'assets/images/img_rectangle6557.png';
-  static const String imagesImgRectangle6557278x390 = 'assets/images/img_rectangle6557_278x390.png';
-  static const String imagesImgRectangle6557278x391 = 'assets/images/img_rectangle6557_278x391.png';
-  static const String imagesImgRectangle6557278x392 = 'assets/images/img_rectangle6557_278x392.png';
-  static const String imagesImgRectangle6558 = 'assets/images/img_rectangle6558.png';
-  static const String imagesImgRectangle65581 = 'assets/images/img_rectangle6558_1.png';
-  static const String imagesImgRectangle6558160x393 = 'assets/images/img_rectangle6558_160x393.png';
-  static const String imagesImgRectangle65582 = 'assets/images/img_rectangle6558_2.png';
-  static const String imagesImgRectangle6559 = 'assets/images/img_rectangle6559.png';
-  static const String imagesImgRectangle655987x87 = 'assets/images/img_rectangle6559_87x87.png';
-  static const String imagesImgRectangle655994x94 = 'assets/images/img_rectangle6559_94x94.png';
-  static const String imagesImgRectangle6641 = 'assets/images/img_rectangle6641.png';
-  static const String imagesImgRectangle6643 = 'assets/images/img_rectangle6643.png';
-  static const String imagesImgRectangle6645 = 'assets/images/img_rectangle6645.png';
-  static const String imagesImgRectangle6647 = 'assets/images/img_rectangle6647.png';
-  static const String imagesImgRectangle6685 = 'assets/images/img_rectangle6685.png';
-  static const String imagesImgRectangle6686 = 'assets/images/img_rectangle6686.png';
-  static const String imagesImgRectangle6771 = 'assets/images/img_rectangle6771.png';
-  static const String imagesImgRectangle67711 = 'assets/images/img_rectangle6771_1.png';
-  static const String imagesImgRectangle67712 = 'assets/images/img_rectangle6771_2.png';
-  static const String imagesImgRectangle67713 = 'assets/images/img_rectangle6771_3.png';
-  static const String imagesImgRectangle67714 = 'assets/images/img_rectangle6771_4.png';
-  static const String imagesImgRectangle677190x121 = 'assets/images/img_rectangle6771_90x121.png';
-  static const String imagesImgRectangle6772 = 'assets/images/img_rectangle6772.png';
-  static const String imagesImgRectangle67721 = 'assets/images/img_rectangle6772_1.png';
-  static const String imagesImgRectangle677290x121 = 'assets/images/img_rectangle6772_90x121.png';
-  static const String imagesImgRectangle6773 = 'assets/images/img_rectangle6773.png';
-  static const String imagesImgRectangle67731 = 'assets/images/img_rectangle6773_1.png';
-  static const String imagesImgRectangle677390x121 = 'assets/images/img_rectangle6773_90x121.png';
-  static const String imagesImgRectangle6779 = 'assets/images/img_rectangle6779.png';
+  static const String imagesImgRectangle4310x393 =
+      'assets/images/img_rectangle4_310x393.png';
+  static const String imagesImgRectangle4316x393 =
+      'assets/images/img_rectangle4_316x393.png';
+  static const String imagesImgRectangle52 =
+      'assets/images/img_rectangle52.png';
+  static const String imagesImgRectangle53 =
+      'assets/images/img_rectangle53.png';
+  static const String imagesImgRectangle54 =
+      'assets/images/img_rectangle54.png';
+  static const String imagesImgRectangle55 =
+      'assets/images/img_rectangle55.png';
+  static const String imagesImgRectangle56 =
+      'assets/images/img_rectangle56.png';
+  static const String imagesImgRectangle56139x161 =
+      'assets/images/img_rectangle56_139x161.png';
+  static const String imagesImgRectangle57 =
+      'assets/images/img_rectangle57.png';
+  static const String imagesImgRectangle58 =
+      'assets/images/img_rectangle58.png';
+  static const String imagesImgRectangle59 =
+      'assets/images/img_rectangle59.png';
+  static const String imagesImgRectangle60 =
+      'assets/images/img_rectangle60.png';
+  static const String imagesImgRectangle61 =
+      'assets/images/img_rectangle61.png';
+  static const String imagesImgRectangle61295x340 =
+      'assets/images/img_rectangle61_295x340.png';
+  static const String imagesImgRectangle62 =
+      'assets/images/img_rectangle62.png';
+  static const String imagesImgRectangle6549 =
+      'assets/images/img_rectangle6549.png';
+  static const String imagesImgRectangle6550 =
+      'assets/images/img_rectangle6550.png';
+  static const String imagesImgRectangle6555 =
+      'assets/images/img_rectangle6555.png';
+  static const String imagesImgRectangle6555262x390 =
+      'assets/images/img_rectangle6555_262x390.png';
+  static const String imagesImgRectangle6555262x391 =
+      'assets/images/img_rectangle6555_262x391.png';
+  static const String imagesImgRectangle6555262x392 =
+      'assets/images/img_rectangle6555_262x392.png';
+  static const String imagesImgRectangle6556 =
+      'assets/images/img_rectangle6556.png';
+  static const String imagesImgRectangle6556280x390 =
+      'assets/images/img_rectangle6556_280x390.png';
+  static const String imagesImgRectangle6556280x391 =
+      'assets/images/img_rectangle6556_280x391.png';
+  static const String imagesImgRectangle6556280x392 =
+      'assets/images/img_rectangle6556_280x392.png';
+  static const String imagesImgRectangle6557 =
+      'assets/images/img_rectangle6557.png';
+  static const String imagesImgRectangle6557278x390 =
+      'assets/images/img_rectangle6557_278x390.png';
+  static const String imagesImgRectangle6557278x391 =
+      'assets/images/img_rectangle6557_278x391.png';
+  static const String imagesImgRectangle6557278x392 =
+      'assets/images/img_rectangle6557_278x392.png';
+  static const String imagesImgRectangle6558 =
+      'assets/images/img_rectangle6558.png';
+  static const String imagesImgRectangle65581 =
+      'assets/images/img_rectangle6558_1.png';
+  static const String imagesImgRectangle6558160x393 =
+      'assets/images/img_rectangle6558_160x393.png';
+  static const String imagesImgRectangle65582 =
+      'assets/images/img_rectangle6558_2.png';
+  static const String imagesImgRectangle6559 =
+      'assets/images/img_rectangle6559.png';
+  static const String imagesImgRectangle655987x87 =
+      'assets/images/img_rectangle6559_87x87.png';
+  static const String imagesImgRectangle655994x94 =
+      'assets/images/img_rectangle6559_94x94.png';
+  static const String imagesImgRectangle6641 =
+      'assets/images/img_rectangle6641.png';
+  static const String imagesImgRectangle6643 =
+      'assets/images/img_rectangle6643.png';
+  static const String imagesImgRectangle6645 =
+      'assets/images/img_rectangle6645.png';
+  static const String imagesImgRectangle6647 =
+      'assets/images/img_rectangle6647.png';
+  static const String imagesImgRectangle6685 =
+      'assets/images/img_rectangle6685.png';
+  static const String imagesImgRectangle6686 =
+      'assets/images/img_rectangle6686.png';
+  static const String imagesImgRectangle6771 =
+      'assets/images/img_rectangle6771.png';
+  static const String imagesImgRectangle67711 =
+      'assets/images/img_rectangle6771_1.png';
+  static const String imagesImgRectangle67712 =
+      'assets/images/img_rectangle6771_2.png';
+  static const String imagesImgRectangle67713 =
+      'assets/images/img_rectangle6771_3.png';
+  static const String imagesImgRectangle67714 =
+      'assets/images/img_rectangle6771_4.png';
+  static const String imagesImgRectangle677190x121 =
+      'assets/images/img_rectangle6771_90x121.png';
+  static const String imagesImgRectangle6772 =
+      'assets/images/img_rectangle6772.png';
+  static const String imagesImgRectangle67721 =
+      'assets/images/img_rectangle6772_1.png';
+  static const String imagesImgRectangle677290x121 =
+      'assets/images/img_rectangle6772_90x121.png';
+  static const String imagesImgRectangle6773 =
+      'assets/images/img_rectangle6773.png';
+  static const String imagesImgRectangle67731 =
+      'assets/images/img_rectangle6773_1.png';
+  static const String imagesImgRectangle677390x121 =
+      'assets/images/img_rectangle6773_90x121.png';
+  static const String imagesImgRectangle6779 =
+      'assets/images/img_rectangle6779.png';
   static const String imagesImgRefresh = 'assets/images/img_refresh.svg';
-  static const String imagesImgRightarrow4 = 'assets/images/img_rightarrow4.png';
+  static const String imagesImgRightarrow4 =
+      'assets/images/img_rightarrow4.png';
   static const String imagesImgScore1 = 'assets/images/img_score1.png';
   static const String imagesImgSearch15 = 'assets/images/img_search15.png';
   static const String imagesImgSetting1 = 'assets/images/img_setting1.png';
-  static const String imagesImgSharesquare4 = 'assets/images/img_sharesquare4.png';
+  static const String imagesImgSharesquare4 =
+      'assets/images/img_sharesquare4.png';
   static const String imagesImgSignal = 'assets/images/img_signal.svg';
-  static const String imagesImgSignalPrimary = 'assets/images/img_signal_primary.svg';
+  static const String imagesImgSignalPrimary =
+      'assets/images/img_signal_primary.svg';
   static const String imagesImgSortalt1 = 'assets/images/img_sortalt1.png';
   static const String imagesImgThumbsup1 = 'assets/images/img_thumbsup1.png';
   static const String imagesImgTicket = 'assets/images/img_ticket.svg';
   static const String imagesImgTime1 = 'assets/images/img_time1.png';
   static const String imagesImgTrophy1 = 'assets/images/img_trophy1.png';
-  static const String imagesImgTrophystar1 = 'assets/images/img_trophystar1.png';
+  static const String imagesImgTrophystar1 =
+      'assets/images/img_trophystar1.png';
   static const String imagesImgUser11 = 'assets/images/img_user11.png';
   static const String imagesImgUsers11 = 'assets/images/img_users11.png';
   static const String imagesImgVector = 'assets/images/img_vector.svg';
-  static const String imagesImgVectorDeepPurpleA200 = 'assets/images/img_vector_deep_purple_a200.svg';
-  static const String imagesImgVectorErrorcontainer = 'assets/images/img_vector_errorcontainer.svg';
-  static const String imagesImgVectorOnerror = 'assets/images/img_vector_onerror.svg';
-  static const String imagesImgVectorOnprimary = 'assets/images/img_vector_onprimary.svg';
-  static const String imagesImgVectorTealA700 = 'assets/images/img_vector_teal_a700.svg';
-  static const String imagesImgVideocameraalt = 'assets/images/img_videocameraalt.png';
+  static const String imagesImgVectorDeepPurpleA200 =
+      'assets/images/img_vector_deep_purple_a200.svg';
+  static const String imagesImgVectorErrorcontainer =
+      'assets/images/img_vector_errorcontainer.svg';
+  static const String imagesImgVectorOnerror =
+      'assets/images/img_vector_onerror.svg';
+  static const String imagesImgVectorOnprimary =
+      'assets/images/img_vector_onprimary.svg';
+  static const String imagesImgVectorTealA700 =
+      'assets/images/img_vector_teal_a700.svg';
+  static const String imagesImgVideocameraalt =
+      'assets/images/img_videocameraalt.png';
   static const String imagesImgVolume = 'assets/images/img_volume.svg';
   static const String imagesImgVolume1 = 'assets/images/img_volume1.png';
   static const String imagesImgWhatsapp1 = 'assets/images/img_whatsapp1.png';
@@ -275,79 +413,161 @@ class Assets {
   static const String imagesQuestionMark = 'assets/images/question_mark.png';
   static const String imagesUploadImage = 'assets/images/upload_image.png';
   static const String imagesVector = 'assets/images/Vector.png';
-  static const String introductionIntoScreen = 'lib/Screens/Introduction/into_screen.dart';
+  static const String introductionIntoScreen =
+      'lib/Screens/Introduction/into_screen.dart';
   static const String libMain = 'lib/main.dart';
-  static const String libWidgetsCustomSearchView = 'lib/widgets/custom_search_view.dart';
-  static const String localizationAppLocalization = 'lib/localization/app_localization.dart';
-  static const String messagingMesageView = 'lib/Screens/Messaging/mesage_view.dart';
-  static const String messagingMessaging = 'lib/Screens/Messaging/messaging.dart';
+  static const String libWidgetsCustomSearchView =
+      'lib/widgets/custom_search_view.dart';
+  static const String localizationAppLocalization =
+      'lib/localization/app_localization.dart';
+  static const String messagingMesageView =
+      'lib/Screens/Messaging/mesage_view.dart';
+  static const String messagingMessaging =
+      'lib/Screens/Messaging/messaging.dart';
   static const String modelsUser = 'lib/models/User.dart';
-  static const String newImagesUploadImage = 'assets/images/new_images/upload_image.png';
-  static const String newsAndScoreLiveScoreView = 'lib/Screens/News_and_Score/live_score_view.dart';
-  static const String newsAndScoreNewsPage = 'lib/Screens/News_and_Score/news_page.dart';
-  static const String newsAndScoreNewsScorre = 'lib/Screens/News_and_Score/news_scorre.dart';
-  static const String newsAndScoreScoreResults = 'lib/Screens/News_and_Score/score_results.dart';
-  static const String notificationsNotification = 'lib/Screens/Notifications/notification.dart';
-  static const String notificationsNotificationSetting = 'lib/Screens/Notifications/notification_setting.dart';
-  static const String offersAndApplicationsOffersAndApplication = 'lib/Screens/Offers_and_applications/offers_and_application.dart';
-  static const String playerAuthCreateAccount = 'lib/Screens/Authentication/player_auth/CreateAccount.dart';
-  static const String playerAuthLogin = 'lib/Screens/Authentication/player_auth/Login.dart';
-  static const String playerAuthSetProfile = 'lib/Screens/Authentication/player_auth/set_profile.dart';
-  static const String playerAuthTabchangerCreateAc = 'lib/Screens/Authentication/player_auth/tabchanger_create_ac.dart';
-  static const String postUploadUploadPostOne = 'lib/Screens/Post_Upload/upload_post_one.dart';
-  static const String postUploadUploadVideo = 'lib/Screens/Post_Upload/upload_video.dart';
+  static const String newImagesUploadImage =
+      'assets/images/new_images/upload_image.png';
+  static const String newsAndScoreLiveScoreView =
+      'lib/Screens/News_and_Score/live_score_view.dart';
+  static const String newsAndScoreNewsPage =
+      'lib/Screens/News_and_Score/news_page.dart';
+  static const String newsAndScoreNewsScorre =
+      'lib/Screens/News_and_Score/news_scorre.dart';
+  static const String newsAndScoreScoreResults =
+      'lib/Screens/News_and_Score/score_results.dart';
+  static const String notificationsNotification =
+      'lib/Screens/Notifications/notification.dart';
+  static const String notificationsNotificationSetting =
+      'lib/Screens/Notifications/notification_setting.dart';
+  static const String offersAndApplicationsOffersAndApplication =
+      'lib/Screens/Offers_and_applications/offers_and_application.dart';
+  static const String playerAuthCreateAccount =
+      'lib/Screens/Authentication/player_auth/CreateAccount.dart';
+  static const String playerAuthLogin =
+      'lib/Screens/Authentication/player_auth/Login.dart';
+  static const String playerAuthSetProfile =
+      'lib/Screens/Authentication/player_auth/set_profile.dart';
+  static const String playerAuthTabchangerCreateAc =
+      'lib/Screens/Authentication/player_auth/tabchanger_create_ac.dart';
+  static const String postUploadUploadPostOne =
+      'lib/Screens/Post_Upload/upload_post_one.dart';
+  static const String postUploadUploadVideo =
+      'lib/Screens/Post_Upload/upload_video.dart';
   static const String providersResendTimer = 'lib/providers/ResendTimer.dart';
   static const String providersUserProvider = 'lib/providers/UserProvider.dart';
-  static const String relationshipClubProfile = 'lib/Screens/Relationship/club_profile.dart';
-  static const String relationshipRelationship = 'lib/Screens/Relationship/relationship.dart';
-  static const String sabwidgetsAddskill = 'lib/Screens/CreateProfile/widgets/sabwidgets/_addskill.dart';
-  static const String screensCategoryCreateAccount = 'lib/Screens/category_create_account.dart';
-  static const String screensCustomBottombar = 'lib/Screens/CustomBottombar.dart';
+  static const String relationshipClubProfile =
+      'lib/Screens/Relationship/club_profile.dart';
+  static const String relationshipRelationship =
+      'lib/Screens/Relationship/relationship.dart';
+  static const String sabwidgetsAddskill =
+      'lib/Screens/CreateProfile/widgets/sabwidgets/_addskill.dart';
+  static const String screensCategoryCreateAccount =
+      'lib/Screens/category_create_account.dart';
+  static const String screensCustomBottombar =
+      'lib/Screens/CustomBottombar.dart';
   static const String screensHome = 'lib/Screens/Home.dart';
   static const String screensPlayerProfile = 'lib/Screens/player_profile.dart';
   static const String settingPrivacy = 'lib/Screens/Setting/privacy.dart';
   static const String settingSetting = 'lib/Screens/Setting/setting.dart';
   static const String themeAppDecoration = 'lib/theme/app_decoration.dart';
-  static const String themeCustomButtonStyle = 'lib/theme/custom_button_style.dart';
+  static const String themeCustomButtonStyle =
+      'lib/theme/custom_button_style.dart';
   static const String themeCustomTextStyle = 'lib/theme/custom_text_style.dart';
   static const String themeThemeHelper = 'lib/theme/theme_helper.dart';
   static const String utilsImageConstant = 'lib/Utils/image_constant.dart';
   static const String utilsPrefUtils = 'lib/Utils/pref_utils.dart';
   static const String utilsSizeUtils = 'lib/Utils/size_utils.dart';
   static const String utilsThem = 'lib/Utils/them.dart';
-  static const String utilsValidationFunctions = 'lib/Utils/validation_functions.dart';
+  static const String utilsValidationFunctions =
+      'lib/Utils/validation_functions.dart';
   static const String widgetClub = 'lib/Screens/Relationship/widget/_club.dart';
-  static const String widgetCustomtextfiled = 'lib/Screens/Authentication/widget/customtextfiled.dart';
-  static const String widgetsAcceptOffer = 'lib/Screens/Offers_and_applications/widgets/Accept_offer.dart';
-  static const String widgetsAchievements = 'lib/Screens/CreateProfile/widgets/Achievements.dart';
-  static const String widgetsApplication = 'lib/Screens/Offers_and_applications/widgets/application.dart';
+  static const String widgetCustomtextfiled =
+      'lib/Screens/Authentication/widget/customtextfiled.dart';
+  static const String widgetsAcceptOffer =
+      'lib/Screens/Offers_and_applications/widgets/Accept_offer.dart';
+  static const String widgetsAchievements =
+      'lib/Screens/CreateProfile/widgets/Achievements.dart';
+  static const String widgetsApplication =
+      'lib/Screens/Offers_and_applications/widgets/application.dart';
   static const String widgetsBaseButton = 'lib/widgets/base_button.dart';
-  static const String widgetsComments = 'lib/Screens/HomeScreen/widgets/comments.dart';
-  static const String widgetsCommentsReply = 'lib/Screens/HomeScreen/widgets/comments_reply.dart';
-  static const String widgetsCustomBottomBar = 'lib/widgets/custom_bottom_bar.dart';
-  static const String widgetsCustomDropDown = 'lib/widgets/custom_drop_down.dart';
-  static const String widgetsCustomElevatedButton = 'lib/widgets/custom_elevated_button.dart';
-  static const String widgetsCustomIconButton = 'lib/widgets/custom_icon_button.dart';
-  static const String widgetsCustomImageView = 'lib/widgets/custom_image_view.dart';
-  static const String widgetsCustomOutlinedButton = 'lib/widgets/custom_outlined_button.dart';
-  static const String widgetsCustomRadioButton = 'lib/widgets/custom_radio_button.dart';
-  static const String widgetsCustomSearchView = 'lib/Screens/Offers_and_applications/widgets/custom_search_view.dart';
+  static const String widgetsComments =
+      'lib/Screens/HomeScreen/widgets/comments.dart';
+  static const String widgetsCommentsReply =
+      'lib/Screens/HomeScreen/widgets/comments_reply.dart';
+  static const String widgetsCustomBottomBar =
+      'lib/widgets/custom_bottom_bar.dart';
+  static const String widgetsCustomDropDown =
+      'lib/widgets/custom_drop_down.dart';
+  static const String widgetsCustomElevatedButton =
+      'lib/widgets/custom_elevated_button.dart';
+  static const String widgetsCustomIconButton =
+      'lib/widgets/custom_icon_button.dart';
+  static const String widgetsCustomImageView =
+      'lib/widgets/custom_image_view.dart';
+  static const String widgetsCustomOutlinedButton =
+      'lib/widgets/custom_outlined_button.dart';
+  static const String widgetsCustomRadioButton =
+      'lib/widgets/custom_radio_button.dart';
+  static const String widgetsCustomSearchView =
+      'lib/Screens/Offers_and_applications/widgets/custom_search_view.dart';
   static const String widgetsCustomSwitch = 'lib/widgets/custom_switch.dart';
-  static const String widgetsCustomTextFormField = 'lib/widgets/custom_text_form_field.dart';
-  static const String widgetsCustomdropdown = 'lib/Screens/CreateProfile/widgets/Customdropdown.dart';
-  static const String widgetsEditPlayerProfile = 'lib/widgets/edit_player_profile.dart';
-  static const String widgetsEmojiDialog = 'lib/Screens/HomeScreen/widgets/emoji_dialog.dart';
-  static const String widgetsEmojiSelection = 'lib/Screens/HomeScreen/widgets/emoji_selection.dart';
+  static const String widgetsCustomTextFormField =
+      'lib/widgets/custom_text_form_field.dart';
+  static const String widgetsCustomdropdown =
+      'lib/Screens/CreateProfile/widgets/Customdropdown.dart';
+  static const String widgetsEditPlayerProfile =
+      'lib/widgets/edit_player_profile.dart';
+  static const String widgetsEmojiDialog =
+      'lib/Screens/HomeScreen/widgets/emoji_dialog.dart';
+  static const String widgetsEmojiSelection =
+      'lib/Screens/HomeScreen/widgets/emoji_selection.dart';
   static const String widgetsIosDialogue = 'lib/widgets/ios_dialogue.dart';
-  static const String widgetsMessageItem = 'lib/Screens/Messaging/widgets/message_item.dart';
-  static const String widgetsOfferView = 'lib/Screens/Offers_and_applications/widgets/offer_view.dart';
-  static const String widgetsOffers = 'lib/Screens/Offers_and_applications/widgets/offers.dart';
-  static const String widgetsPostItem = 'lib/Screens/HomeScreen/widgets/post_item.dart';
-  static const String widgetsPostItem2 = 'lib/Screens/HomeScreen/widgets/post_item2.dart';
-  static const String widgetsScoreItem = 'lib/Screens/HomeScreen/widgets/score_item.dart';
-  static const String widgetsShareOptionLinks = 'lib/Screens/HomeScreen/widgets/share_option_links.dart';
-  static const String widgetsSkill = 'lib/Screens/CreateProfile/widgets/skill.dart';
-  static const String widgetsTextSendBox = 'lib/Screens/Messaging/widgets/text_send_box.dart';
-  static const String widgetsVideoItem = 'lib/Screens/HomeScreen/widgets/video_item.dart';
+  static const String widgetsMessageItem =
+      'lib/Screens/Messaging/widgets/message_item.dart';
+  static const String widgetsOfferView =
+      'lib/Screens/Offers_and_applications/widgets/offer_view.dart';
+  static const String widgetsOffers =
+      'lib/Screens/Offers_and_applications/widgets/offers.dart';
+  static const String widgetsPostItem =
+      'lib/Screens/HomeScreen/widgets/post_item.dart';
+  static const String widgetsPostItem2 =
+      'lib/Screens/HomeScreen/widgets/post_item2.dart';
+  static const String widgetsScoreItem =
+      'lib/Screens/HomeScreen/widgets/score_item.dart';
+  static const String widgetsShareOptionLinks =
+      'lib/Screens/HomeScreen/widgets/share_option_links.dart';
+  static const String widgetsSkill =
+      'lib/Screens/CreateProfile/widgets/skill.dart';
+  static const String widgetsTextSendBox =
+      'lib/Screens/Messaging/widgets/text_send_box.dart';
+  static const String widgetsVideoItem =
+      'lib/Screens/HomeScreen/widgets/video_item.dart';
+}
 
+class ApiUrl {
+  // static String host = 'https://plagremoverpro.com/sports-areas/public';
+  static String host = 'http://192.168.1.18:8000';
+
+  static String registerUser = '$host/api/user/register';
+  static String loginUser = '$host/api/user/login';
+  static String forgotPassword = '$host/api/user/forgot';
+  static String verifyResetPass = '$host/api/user/verfiy-reset-password';
+  static String resetPassword = '$host/api/user/resetpassword';
+  static String logoutUser = '$host/api/user/logout';
+  static String updateUser = '$host/api/user/update';
+
+  //sports
+  static String sportsList = '$host/api/user/sports';
+
+  //position
+  static String searchPosition = '$host/api/user/position_searching';
+
+  //player
+  static String addPlayer = '$host/api/user/add-player';
+}
+
+enum UserType {
+  player,
+  coach,
+  club,
 }
