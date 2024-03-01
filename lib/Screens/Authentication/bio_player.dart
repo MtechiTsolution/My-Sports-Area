@@ -2,7 +2,7 @@ import 'dart:io';
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:my_sports_app/Screens/Player/createprofile/stepper/stepper_create_ac.dart';
+import 'package:my_sports_app/Screens/Authentication/player_auth/tabchanger_create_ac.dart';
 
 import 'package:my_sports_app/Screens/Authentication/select_game.dart';
 import 'package:my_sports_app/Screens/Authentication/widget/customtextfiled.dart';
@@ -323,7 +323,7 @@ class _Player_BioState extends State<Player_Bio> {
                     width: screenWidth * 0.5,
                     child: ElevatedButton(
                       onPressed: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context) => stepper_acc()));
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => Tab_changer_acc()));
                       },
                       style: ElevatedButton.styleFrom(
                         foregroundColor: Colors.white,

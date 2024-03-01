@@ -1,5 +1,6 @@
 //ignore: unused_import
 import 'dart:convert';
+import 'package:my_sports_app/models/User.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class PrefUtils {
@@ -50,5 +51,19 @@ class PrefUtils {
   bool checklogin() {
     token = _sharedPreferences!.getString("token") ?? '';
     return token.isNotEmpty ? true : false;
+  }
+
+  Future<void> setUser(User user) async {
+    final jsonData = user.toJson();
+    await _sharedPreferences!.setString('user', json.encode(jsonData));
+  }
+
+  User? getUser() {
+    final jsonString = _sharedPreferences!.getString('user');
+    if (jsonString != null) {
+      final jsonData = json.decode(jsonString);
+      return User.fromJson(jsonData);
+    }
+    return null;
   }
 }

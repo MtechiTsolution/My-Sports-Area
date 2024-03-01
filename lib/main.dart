@@ -80,12 +80,16 @@
 //   }
 // }
 import 'package:flutter/material.dart';
+import 'package:my_sports_app/Screens/Authentication/player_auth/tabchanger_create_ac.dart';
 import 'package:my_sports_app/Screens/Home.dart';
 import 'package:my_sports_app/Screens/category_create_account.dart';
 import 'package:my_sports_app/Screens/Introduction/into_screen.dart';
 import 'package:my_sports_app/Utils/pref_utils.dart';
+import 'package:my_sports_app/providers/PositionProvider.dart';
 import 'package:my_sports_app/providers/ResendTimer.dart';
+import 'package:my_sports_app/providers/SportProvider.dart';
 import 'package:my_sports_app/providers/UserProvider.dart';
+import 'package:my_sports_app/test.dart';
 import 'package:provider/provider.dart';
 
 import 'Utils/them.dart';
@@ -103,6 +107,8 @@ class MyApp extends StatelessWidget {
       providers: [
         ListenableProvider<UserProvider>(create: (_) => UserProvider()),
         ListenableProvider<ResendTimer>(create: (_) => ResendTimer()),
+        ListenableProvider<SportProvider>(create: (_) => SportProvider()),
+        ListenableProvider<PositionProvider>(create: (_) => PositionProvider()),
       ],
       child: MaterialApp(
         theme: AppTheme.getTheme(false), // Light mode
@@ -136,10 +142,10 @@ class _SplashScreenDelayState extends State<SplashScreenDelay> {
     Navigator.of(context).pushReplacement(
       MaterialPageRoute(
         builder: (context) => PrefUtils().checklogin()
-            ? Home()
+            ? TestMyApp() //Home()
             : PrefUtils().getShowIntro()
-            ? const CategorySelectionScreen()
-            : const IntroScreen(),
+                ? const CategorySelectionScreen()
+                : const IntroScreen(),
       ),
     );
   }

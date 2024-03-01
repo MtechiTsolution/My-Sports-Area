@@ -64,38 +64,66 @@ class User {
   final String status;
   final String? dateOfBirth;
   final String? bio;
+  final String? address;
+  final String? phoneNumber;
   final String rememberToken;
   final String createdAt;
   final String updatedAt;
+  final String? gender;
   final String? emailVerifiedAt; // Nullable field
 
-  User({
-    required this.id,
-    required this.firstName,
-    required this.lastName,
-    required this.email,
-    required this.status,
-    this.dateOfBirth,
-    this.bio,
-    required this.rememberToken,
-    required this.createdAt,
-    required this.updatedAt,
-    this.emailVerifiedAt, // Nullable field
-  });
+  User(
+      {required this.id,
+      required this.firstName,
+      required this.lastName,
+      required this.email,
+      required this.status,
+      this.dateOfBirth,
+      this.bio,
+      this.address,
+      this.phoneNumber,
+      required this.rememberToken,
+      required this.createdAt,
+      required this.updatedAt,
+      this.emailVerifiedAt,
+      this.gender // Nullable field
+      });
 
   factory User.fromJson(Map<String, dynamic> json) {
     return User(
-      id: json['id'],
-      firstName: json['first_name'],
-      lastName: json['last_name'],
-      email: json['email'],
-      status: json['status'],
-      dateOfBirth: json['date_of_birth'],
-      bio: json['bio'],
-      rememberToken: json['remember_token'],
-      createdAt: json['created_at'],
-      updatedAt: json['updated_at'],
-      emailVerifiedAt: json['email_verified_at'], // Nullable field
-    );
+        id: json['id'],
+        firstName: json['first_name'],
+        lastName: json['last_name'],
+        email: json['email'],
+        status: json['status'],
+        dateOfBirth: json['date_of_birth'],
+        bio: json['bio'],
+        phoneNumber: json['phoneNumber'],
+        address: json['address'],
+        rememberToken: json['remember_token'],
+        createdAt: json['created_at'],
+        updatedAt: json['updated_at'],
+        emailVerifiedAt: json['email_verified_at'],
+        gender: json['gender'] // Nullable field
+        );
+  }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'id': id,
+      'first_name': firstName,
+      'last_name': lastName,
+      'email': email,
+      'status': status,
+      'date_of_birth': dateOfBirth,
+      'bio': bio,
+      'phoneNumber': phoneNumber,
+      'address': address,
+      'remember_token': rememberToken,
+      'created_at': createdAt,
+      'updated_at': updatedAt,
+      'email_verified_at': emailVerifiedAt ?? '',
+      'gender': gender
+    };
   }
 }

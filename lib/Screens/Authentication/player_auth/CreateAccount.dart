@@ -217,13 +217,7 @@ class _CreateAccountState extends State<CreateAccount> {
                   buttonStyle: CustomButtonStyles.fillPink,
                   buttonTextStyle: ButtonText.button_Text(isDarkMode),
                   onTap: () {
-                    //onTapCreateaccount(context);
-
-                    //testing purpose
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => Player_Bio()),
-                    );
+                    onTapCreateaccount(context);
                   },
                   alignment: Alignment.center,
                 ),
@@ -295,48 +289,32 @@ class _CreateAccountState extends State<CreateAccount> {
       ),
     );
   }
-  //
-  // void onTapCreateaccount(BuildContext context) async {
-  //   if (_formKey.currentState!.validate()) {
-  //     showIosDialoge(context);
-  //     _formKey.currentState!.save();
-  //     UserRegistration userData = UserRegistration(
-  //         email: emailController.text,
-  //         firstName: firstNameController.text,
-  //         lastName: lastNameController.text,
-  //         password: passwordController.text,
-  //         passwordConfirmation: passwordController.text,
-  //         status: widget.userType.name);
-  //     var res = await UserProvider().registerUser(userData);
-  //     Navigator.of(context).pop();
-  //     if (res) {
-  //       Navigator.push(
-  //         context,
-  //         MaterialPageRoute(builder: (context) => Player_Bio()),
-  //       );
-  //     } else {
-  //       showSnakbar(context);
-  //     }
-  //   }
-  // }
+
+  void onTapCreateaccount(BuildContext context) async {
+    if (_formKey.currentState!.validate()) {
+      showIosDialoge(context);
+      _formKey.currentState!.save();
+      UserRegistration userData = UserRegistration(
+          email: emailController.text,
+          firstName: firstNameController.text,
+          lastName: lastNameController.text,
+          password: passwordController.text,
+          passwordConfirmation: passwordController.text,
+          status: widget.userType.name);
+      var res = await UserProvider().registerUser(userData);
+      Navigator.of(context).pop();
+      if (res) {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => Player_Bio()),
+        );
+      } else {
+        showSnakbar(context);
+      }
+    }
+  }
 
   void onTapTxtWithlogin() {
     Navigator.push(context, MaterialPageRoute(builder: (context) => Login()));
   }
-}
-
-class ApiUrl {
-  static String host = 'https://plagremoverpro.com/sports-areas/public';
-  static String registerUser = '$host/api/user/register';
-  static String loginUser = '$host/api/user/login';
-  static String forgotPassword = '$host/api/user/forgot';
-  static String verifyResetPass = '$host/api/user/verfiy-reset-password';
-  static String resetPassword = '$host/api/user/resetpassword';
-  static String logoutUser = '$host/api/user/logout';
-}
-
-enum UserType {
-  player,
-  coach,
-  club,
 }
